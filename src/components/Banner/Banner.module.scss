@@ -1,0 +1,33 @@
+@import "../../app/variables";
+
+.banner {
+	position: relative;
+	.containerImage {
+		position: relative;
+		width: 100%;
+		max-height: 590px;
+		height: 100vh;
+		img {
+			object-fit: cover;
+		}
+	}
+	.containerText {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		background-color: $azul;
+		color: $offWhite;
+		padding-block: 6px 11px;
+		padding-inline: 38px;
+		p {
+			font-family: var(--font-playfair-display);
+			font-size: 3.5rem;
+			line-height: 114.286%;
+			@media (max-width: 768px) {
+				font-size: 2.4rem;
+			}
+		}
+	}
+}
