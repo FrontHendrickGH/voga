@@ -21,6 +21,9 @@
 	z-index: 2;
 	display: flex;
 	justify-content: flex-end;
+	@media (max-width: 768px) {
+		height: 94px;
+	}
 	.image {
 		width: 100px !important;
 		height: 54px !important;
@@ -28,11 +31,12 @@
 		@media (max-width: 768px) {
 			top: initial !important;
 			left: initial !important;
+			bottom: initial !important;
 		}
 	}
 	@media (max-width: 768px) {
 		padding-left: 2rem;
-		padding-top: 2rem;
+		padding-block: 2rem;
 	}
 }
 
@@ -49,6 +53,7 @@
 		width: 24px;
 		height: 24px;
 	}
+	padding-top: 35px;
 }
 
 /* Estilos base para links */
@@ -174,6 +179,7 @@
 		transform: translateY(-343px);
 		transition: transform 0.6s ease;
 		z-index: 1;
+		background-color: $blanco;
 	}
 
 	.navLinks.open {
