@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.scss";
+import Navbar from "@/components/Navbar";
 
 const openSans = Open_Sans({
 	variable: "--font-open-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${openSans.variable} ${playfairDisplay.variable}`}>
+				<Navbar />
 				{children}
 			</body>
 		</html>
