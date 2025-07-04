@@ -9,17 +9,30 @@
 	color: $azul;
 	position: relative;
 	@media (max-width: 768px) {
-		padding-block: 1rem;
-		padding-inline: 2rem 0;
+		padding: 0;
+		align-items: flex-start;
 	}
 }
 
 .logo {
 	position: relative;
-	width: 100px;
-	height: 54px;
+	width: 120px;
+	height: 74px;
+	z-index: 2;
+	display: flex;
+	justify-content: flex-end;
 	.image {
+		width: 100px !important;
+		height: 54px !important;
 		object-fit: cover;
+		@media (max-width: 768px) {
+			top: initial !important;
+			left: initial !important;
+		}
+	}
+	@media (max-width: 768px) {
+		padding-left: 2rem;
+		padding-top: 2rem;
 	}
 }
 
@@ -30,7 +43,6 @@
 	border: none;
 	color: $azul;
 	font-size: 1.5rem;
-	display: flex;
 	padding: 20px;
 	cursor: pointer;
 	svg {
@@ -55,6 +67,12 @@
 	line-height: 100%;
 	letter-spacing: 2.75px;
 	text-transform: uppercase;
+	transition: color 0.3s ease;
+	&:hover {
+		@media (min-width: 769px) {
+			color: $gray;
+		}
+	}
 }
 
 /* Dropdown menu */
@@ -71,10 +89,6 @@
 	display: flex;
 	gap: 1.1rem;
 	align-items: center;
-	transition: color 0.3s ease;
-	&:hover {
-		color: $gray;
-	}
 	.containerArrow {
 		position: relative;
 		width: 9px;
@@ -92,13 +106,15 @@
 		}
 	}
 	&:hover {
-		.containerArrow {
-			img {
-				&:first-child {
-					opacity: 0;
-				}
-				&:last-child {
-					opacity: 1;
+		@media (min-width: 769px) {
+			.containerArrow {
+				img {
+					&:first-child {
+						opacity: 0;
+					}
+					&:last-child {
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -121,6 +137,9 @@
 	gap: 1.8rem;
 	border: none;
 	outline: none;
+	@media (max-width: 768px) {
+		padding-bottom: 0;
+	}
 }
 
 .menuItems a {
@@ -137,6 +156,7 @@
 @media (max-width: 768px) {
 	.logo {
 		z-index: 2;
+		background-color: $blanco;
 	}
 	.hamburger {
 		display: block;
@@ -150,7 +170,7 @@
 		left: 0;
 		width: 100%;
 		padding: 2rem;
-		// display: none;
+		padding-top: 6.1rem;
 		transform: translateY(-343px);
 		transition: transform 0.6s ease;
 		z-index: 1;
