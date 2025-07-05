@@ -29,8 +29,8 @@ const TwoCards = () => {
 						Exclusivo en Tijuana.
 					</h3>
 					<p className={classes.description}>
-						Sorprende a tus invitados con una experiencia gastronómica
-						excepcional
+						Sorprende a tus invitados con una experiencia
+						<br /> gastronómica excepcional
 					</p>
 					<Link href={"#"} className={classes.link}>
 						Descúbrela
