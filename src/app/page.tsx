@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 import Banner from "@/components/Banner";
+import TwoCards from "@/components/TwoCards";
 
 export default function Home() {
 	return (
@@ -9,6 +10,7 @@ export default function Home() {
 				image={{ src: "/banner-nosotros.png", alt: "sobre nosotros" }}
 				title={"Quiénes Somos"}
 			/>
+			<TwoCards />
 			<Footer
 				paddingTop={271}
 				title="Haz Realidad el Evento de Tus Sueños."
