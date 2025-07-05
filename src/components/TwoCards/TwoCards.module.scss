@@ -4,24 +4,34 @@
 	gap: 20px;
 	justify-content: space-evenly;
 	transform: translateY(154px);
+	@media (max-width: 1200px) {
+		padding-inline: 80px;
+	}
+	@media (max-width: 1024px) {
+		margin-top: -144px;
+		transform: translateY(204px);
+	}
 
 	@media (max-width: 768px) {
 		flex-direction: column;
 		align-items: center;
 		gap: 60px;
 		transform: translateY(214px);
-		margin-top: -154px;
+		padding-inline: 20px;
 	}
 	.card {
 		max-width: 630px;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
 		figure {
 			position: relative;
 			width: 100%;
 			height: 375px;
-			@media (max-width: 768px) {
+			@media (max-width: 1024px) {
 				height: 250px;
 			}
 			img {
@@ -61,6 +71,9 @@
 		text-align: center;
 		padding-top: 55px;
 		padding-bottom: 62px;
+		@media (max-width: 1024px) {
+			padding-block: 30px;
+		}
 		@media (max-width: 768px) {
 			padding-block: 15px 30px;
 		}
@@ -84,9 +97,11 @@
 			padding-bottom: 33px;
 			margin-bottom: 33px;
 			position: relative;
-			@media (max-width: 768px) {
+			@media (max-width: 1024px) {
 				padding-bottom: 15px;
 				margin-bottom: 15px;
+			}
+			@media (max-width: 768px) {
 				font-size: 2.4rem;
 			}
 			&::after {
@@ -104,8 +119,10 @@
 			font-size: 1.5rem;
 			margin-bottom: 60px;
 			max-width: 414px;
-			@media (max-width: 768px) {
+			@media (max-width: 1024px) {
 				margin-bottom: 30px;
+			}
+			@media (max-width: 768px) {
 				font-size: 1.2rem;
 			}
 		}
