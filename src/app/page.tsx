@@ -5,6 +5,7 @@ import TwoCards from "@/components/TwoCards";
 import FeaturedCards from "@/components/FeaturedCards";
 import CTA from "@/components/CTA";
 import IntroduceLounge from "@/components/IntroduceLounge";
+import PresentLounge from "@/components/PresentLounge";
 
 export default function Home() {
 	return (
@@ -34,6 +35,7 @@ export default function Home() {
 			/>
 			<FeaturedCards />
 			<IntroduceLounge />
+			<PresentLounge />
 			<TwoCards />
 			<Footer
 				paddingTop={271}
