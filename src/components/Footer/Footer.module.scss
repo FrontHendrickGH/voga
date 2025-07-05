@@ -13,6 +13,7 @@
 		flex: 1;
 		figure {
 			margin-bottom: 50px;
+			max-height: 50px;
 		}
 		.containerText {
 			h3 {
@@ -20,7 +21,7 @@
 				font-family: var(--font-playfair-display);
 				line-height: 114.286%;
 				font-size: 3.5rem;
-				margin-bottom: 24px;
+				margin-bottom: 26px;
 				font-weight: 400;
 				@media (max-width: 768px) {
 					font-size: 2.4rem;
@@ -31,13 +32,19 @@
 				font-size: 1.5rem;
 				line-height: normal;
 				max-width: 414px;
+				margin-bottom: 139px;
 			}
 		}
 	}
 	.right {
 		max-width: 414px;
 		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		margin-bottom: 82px;
 		.buttonContact {
+			align-self: flex-start;
 			background-color: $offWhite;
 			color: $azul;
 			display: inline-block;
@@ -62,7 +69,12 @@
 				li {
 					padding-bottom: 18px;
 					border-bottom: 0.75px solid $offWhite;
-					margin-bottom: 18px;
+					&:first-child {
+						margin-bottom: 15px;
+					}
+					&:last-child {
+						margin-bottom: 18px;
+					}
 				}
 			}
 			.bottomLinks {
@@ -80,6 +92,5 @@
 		font-size: 1.1rem;
 		line-height: normal;
 		font-weight: 600;
-		margin-top: 94px;
 	}
 }
