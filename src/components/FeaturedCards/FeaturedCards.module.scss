@@ -6,7 +6,7 @@
 		width: 100%;
 		height: 1080px;
 		@media (max-width: 640px) {
-			height: 1500px;
+			height: 1600px;
 		}
 		img {
 			object-fit: cover;
@@ -21,14 +21,14 @@
 			gap: 32px 20px;
 			justify-content: space-between;
 			@media (max-width: 1200px) {
-				padding-block: 100px 60px;
+				padding-block: 140px 60px;
 				justify-content: space-evenly;
 			}
 			@media (max-width: 768px) {
 				padding-inline: 20px;
 			}
 			@media (max-width: 640px) {
-				padding-block: 60px;
+				padding-block: 160px 60px;
 			}
 			.card {
 				border-bottom-left-radius: 12px;
