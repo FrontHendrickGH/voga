@@ -1,0 +1,51 @@
+@use "../../app/variables" as *;
+
+.introduce {
+	padding-block: 152px 44px;
+	background-color: $blanco;
+	color: $azul;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: var(--font-playfair-display);
+	@media (max-width: 768px) {
+		padding-top: 60px;
+	}
+	h3 {
+		font-size: 5rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		margin-bottom: 42px;
+		max-width: 652px;
+		@media (max-width: 768px) {
+			font-size: 3rem;
+			letter-spacing: 0.8px;
+			margin-bottom: 30px;
+			margin-inline: 20px;
+		}
+	}
+	p {
+		font-size: 3.5rem;
+		line-height: 114.286%;
+		position: relative;
+		padding-bottom: 42px;
+		&::after {
+			position: absolute;
+			content: "";
+			width: 45px;
+			height: 0.75px;
+			background-color: $azul;
+			transform: translateX(-50%);
+			bottom: 0;
+			left: 50%;
+		}
+		@media (max-width: 768px) {
+			font-size: 2.4rem;
+			padding-bottom: 30px;
+		}
+	}
+}
