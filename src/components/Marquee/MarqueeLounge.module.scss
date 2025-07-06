@@ -1,0 +1,25 @@
+@use "../../app/variables" as *;
+.container {
+	margin-top: 36px;
+	padding-block: 100px 130px;
+	@media (max-width: 1200px) {
+		padding-inline: 80px;
+	}
+	@media (max-width: 768px) {
+		padding-block: 30px;
+		padding-inline: 20px;
+	}
+	.title {
+		font-family: var(--font-playfair-display);
+		font-size: 10rem;
+		font-style: normal;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		line-height: 100%;
+		color: $azul;
+		@media (max-width: 768px) {
+			font-size: 4rem;
+		}
+	}
+}
