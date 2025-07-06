@@ -1,20 +1,22 @@
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
-import Banner from "@/components/Banner";
+// import Banner from "@/components/Banner";
 import TwoCards from "@/components/TwoCards";
 import FeaturedCards from "@/components/FeaturedCards";
 import CTA from "@/components/CTA";
 import IntroduceLounge from "@/components/IntroduceLounge";
 import PresentLounge from "@/components/PresentLounge";
 import Marquee from "@/components/Marquee";
+import HeroSlider from "@/components/HeroSlider";
 
 export default function Home() {
 	return (
 		<div className={styles.page}>
-			<Banner
+			<HeroSlider />
+			{/* <Banner
 				image={{ src: "/banner-nosotros.png", alt: "sobre nosotros" }}
 				title={"Quiénes Somos"}
-			/>
+			/> */}
 			<CTA
 				backgroundColor="#242C3F"
 				button={{
