@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./HeroSlider.module.scss";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import Link from "next/link";
 
 const HeroSlider = () => {
-	const slides = [
+	const initialSlides = [
 		{
 			src: "/hero-slider/slide-1.png",
 			title: (
@@ -27,7 +27,12 @@ const HeroSlider = () => {
 		},
 		{
 			src: "/hero-slider/slide-2.png",
-			title: "Detalles que sorprenden.",
+			title: (
+				<span>
+					Detalles <br />
+					que sorprenden.
+				</span>
+			),
 			button: {
 				link: "#",
 				title: "Cotiza Ahora",
@@ -37,7 +42,12 @@ const HeroSlider = () => {
 		},
 		{
 			src: "/hero-slider/slide-3.png",
-			title: "Una experiencia de sabor",
+			title: (
+				<span>
+					Una experiencia
+					<br /> de sabor
+				</span>
+			),
 			button: {
 				link: "#",
 				title: "Cotiza Ahora",
@@ -47,7 +57,12 @@ const HeroSlider = () => {
 		},
 		{
 			src: "/hero-slider/slide-4.png",
-			title: "Eventos con estilo",
+			title: (
+				<span>
+					Eventos <br />
+					con estilo
+				</span>
+			),
 			button: {
 				link: "#",
 				title: "Cotiza Ahora",
@@ -56,6 +71,35 @@ const HeroSlider = () => {
 			},
 		},
 	];
+	const [slides, setSlides] = useState(initialSlides);
+
+	useEffect(() => {
+		const updateFirstSlideSrc = () => {
+			setSlides(prev => {
+				const updated = [...prev];
+				updated[0] = {
+					...updated[0],
+					src:
+						window.innerWidth <= 1024
+							? "/hero-slider/slide-1-mobile.png"
+							: "/hero-slider/slide-1.png",
+				};
+				return updated;
+			});
+		};
+
+		// Initial check
+		updateFirstSlideSrc();
+
+		// Listen for resize
+		window.addEventListener("resize", updateFirstSlideSrc);
+
+		// Cleanup
+		return () => {
+			window.removeEventListener("resize", updateFirstSlideSrc);
+		};
+	}, []);
+
 	return (
 		<div className={classes.swiperContainer}>
 			<Swiper
