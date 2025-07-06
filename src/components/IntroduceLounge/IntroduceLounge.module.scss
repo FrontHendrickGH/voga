@@ -1,7 +1,7 @@
 @use "../../app/variables" as *;
 
 .introduce {
-	padding-block: 152px 44px;
+	padding-block: 152px 87px;
 	background-color: $blanco;
 	color: $azul;
 	text-align: center;
@@ -11,6 +11,9 @@
 	font-family: var(--font-playfair-display);
 	@media (max-width: 768px) {
 		padding-top: 60px;
+	}
+	@media (max-width: 640px) {
+		padding-bottom: 30px;
 	}
 	h3 {
 		font-size: 5rem;
