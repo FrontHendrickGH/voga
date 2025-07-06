@@ -1,12 +1,14 @@
 @use "../../app/variables" as *;
 .container {
-	margin-top: 36px;
-	padding-block: 100px 130px;
+	margin-block: 150px 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	@media (max-width: 1200px) {
 		padding-inline: 80px;
 	}
 	@media (max-width: 768px) {
-		padding-block: 30px;
+		margin-block: 30px;
 		padding-inline: 20px;
 	}
 	.title {
@@ -21,5 +23,19 @@
 		@media (max-width: 768px) {
 			font-size: 4rem;
 		}
+	}
+	.link {
+		color: $offWhite;
+		background-color: $azul;
+		font-size: 1.4rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: 2.8px;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 10px 25px;
+		display: inline-block;
+		margin-top: 60px;
 	}
 }
