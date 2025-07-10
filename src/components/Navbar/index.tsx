@@ -14,14 +14,14 @@ const Navbar = () => {
 			<div role="figure" className={styles.gap} />
 			<div className={styles.container}>
 				<nav className={styles.nav}>
-					<figure className={styles.logo}>
+					<Link href={"/"} className={styles.logo}>
 						<Image
 							src={"/voga-logo.svg"}
 							alt="voga logo"
 							fill
 							className={styles.image}
 						/>
-					</figure>
+					</Link>
 
 					<button
 						className={styles.hamburger}
