@@ -1,0 +1,204 @@
+@use "../../app/variables" as *;
+.celebrate {
+	a {
+		display: inline-block;
+	}
+	.hero {
+		display: flex;
+		gap: 160px;
+		justify-content: center;
+		@media (max-width: 1200px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 40px;
+		}
+	}
+	.containerTitle {
+		position: relative;
+		h3 {
+			font-size: 5rem;
+			font-family: var(--font-playfair-display);
+			font-style: normal;
+			font-weight: 400;
+			line-height: 110%;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			max-width: 478px;
+			@media (max-width: 1200px) {
+				text-align: center;
+			}
+			@media (max-width: 768px) {
+				font-size: 3rem;
+				letter-spacing: 0.8px;
+				margin-inline: 20px;
+			}
+			@media (max-width: 640px) {
+				max-width: 70vw;
+			}
+		}
+		svg {
+			position: absolute;
+			top: 0;
+			right: -10px;
+			@media (max-width: 768px) {
+				right: -30px;
+			}
+		}
+	}
+	.schedule {
+		@media (max-width: 1200px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		p {
+			margin-top: 40px;
+			margin-bottom: 75px;
+			max-width: 630px;
+			font-size: 1.5rem;
+			line-height: 100%;
+			color: $azul;
+			max-width: 414px;
+			@media (max-width: 1200px) {
+				margin: 0;
+				margin-bottom: 75px;
+				text-align: center;
+			}
+			@media (max-width: 768px) {
+				margin-inline: 20px;
+				margin-bottom: 40px;
+			}
+		}
+		a {
+			padding: 10px 20px;
+			text-transform: uppercase;
+			font-size: 1.4rem;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 2.8px;
+			text-transform: uppercase;
+			text-align: center;
+			margin-bottom: 150px;
+			color: $offWhite;
+			background-color: $azul;
+			@media (max-width: 1200px) {
+				margin-bottom: 0px;
+			}
+			@media (max-width: 768px) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	.cards {
+		margin-top: 130px;
+		display: flex;
+		padding-inline: 80px;
+		justify-content: space-between;
+		gap: 20px;
+		margin-bottom: calc(-356px / 2);
+		@media (max-width: 1200px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 40px;
+			margin-bottom: -306px;
+		}
+		@media (max-width: 768px) {
+			margin-top: 60px;
+			padding-inline: 20px;
+		}
+
+		.card {
+			padding-inline: 20px;
+			border-bottom-left-radius: 12px;
+			border-bottom-right-radius: 12px;
+			flex: 1 0 100%;
+			max-width: 413px;
+			background-color: $offWhite;
+			width: 100%;
+			position: relative;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: $azul;
+			@media (max-width: 1439px) {
+				flex: 1 0 calc(33% - 10px);
+			}
+			@media (max-width: 1200px) {
+				flex: 1 0 calc(50% - 10px);
+			}
+			svg {
+				position: absolute;
+				top: -12px;
+				max-width: 100%;
+				@media (max-width: 768px) {
+					transform: translateY(2px);
+				}
+				@media (max-width: 640px) {
+					width: 100%;
+					flex: 1 0 100%;
+				}
+			}
+			h3 {
+				display: flex;
+				align-items: flex-end;
+				margin-top: 20px;
+				padding-bottom: 28px;
+				position: relative;
+				font-family: var(--font-playfair-display);
+				font-size: 3.5rem;
+				font-weight: 400;
+				line-height: 114.286%;
+				max-width: 295px;
+				min-height: 150px; // warning
+				@media (max-width: 768px) {
+					font-size: 2.4rem;
+					min-height: initial;
+					margin-top: 40px;
+					padding-bottom: 15px;
+				}
+				&::after {
+					position: absolute;
+					content: "";
+					width: 45px;
+					max-width: 100%;
+					height: 0.75px;
+					background-color: $azul;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+			p {
+				max-width: 330px;
+				font-size: 1.5rem;
+				font-weight: 400;
+				line-height: 121.429%;
+				letter-spacing: 0;
+				margin-top: 25px;
+				margin-bottom: 75px;
+				@media (max-width: 768px) {
+					margin-bottom: 40px;
+				}
+			}
+			a {
+				background-color: $azul;
+				color: $offWhite;
+				padding: 10px 25px;
+				font-size: 1.4rem;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				letter-spacing: 2.8px;
+				text-transform: uppercase;
+				margin-bottom: 58px;
+				@media (max-width: 640px) {
+					margin-bottom: 30px;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
