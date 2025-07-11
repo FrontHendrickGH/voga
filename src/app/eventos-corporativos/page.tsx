@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import BringPeople from "@/components/BringPeople";
 import Footer from "@/components/Footer";
+import MarqueeCorporative from "@/components/MarqueeCorporative";
 import PresentLounge from "@/components/PresentLounge";
 import React from "react";
 
@@ -15,6 +16,7 @@ const CorporativeEvents = () => {
 				}}
 			/>
 			<BringPeople />
+			<MarqueeCorporative />
 			<PresentLounge />
 			<Footer
 				paddingTop={120}
