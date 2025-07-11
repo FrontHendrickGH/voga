@@ -28,8 +28,8 @@ const IntroduceUs = () => {
 				<Swiper
 					modules={[Navigation]}
 					navigation={{
-						nextEl: ".custom-next-2",
-						prevEl: ".custom-prev-2",
+						nextEl: ".custom-next",
+						prevEl: ".custom-prev",
 					}}
 					loop={true}
 					spaceBetween={0}
@@ -48,6 +48,36 @@ const IntroduceUs = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
+				<div className={classes.buttons}>
+					<button className="custom-prev">
+						<svg
+							width="12"
+							height="23"
+							viewBox="0 0 12 23"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M5.46392e-07 11.5L12 22.3253L12 0.674682L5.46392e-07 11.5Z"
+								fill="#EDECEB"
+							/>
+						</svg>
+					</button>
+					<button className="custom-next">
+						<svg
+							width="12"
+							height="23"
+							viewBox="0 0 12 23"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M12 11.5L-6.59078e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+								fill="#EDECEB"
+							/>
+						</svg>
+					</button>
+				</div>
 			</div>
 		</section>
 	);
