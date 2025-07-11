@@ -24,29 +24,31 @@ const IntroduceUs = () => {
 				Con más de 20 años de experiencia, hemos evolucionado para convertirnos
 				en el salón de eventos más exclusivo y elegante en Tijuana.
 			</p>
-			<Swiper
-				modules={[Navigation]}
-				navigation={{
-					nextEl: ".custom-next-2",
-					prevEl: ".custom-prev-2",
-				}}
-				loop={true}
-				spaceBetween={0}
-				slidesPerView={1}
-			>
-				{images.map((src, i) => (
-					<SwiperSlide key={i}>
-						<figure className={classes.image}>
-							<Image
-								src={src}
-								alt={`Slide ${i}`}
-								className="slide-image"
-								fill
-							/>
-						</figure>
-					</SwiperSlide>
-				))}
-			</Swiper>
+			<div className={classes.swiperContainer}>
+				<Swiper
+					modules={[Navigation]}
+					navigation={{
+						nextEl: ".custom-next-2",
+						prevEl: ".custom-prev-2",
+					}}
+					loop={true}
+					spaceBetween={0}
+					slidesPerView={1}
+				>
+					{images.map((src, i) => (
+						<SwiperSlide key={i}>
+							<figure className={classes.image}>
+								<Image
+									src={src}
+									alt={`Slide ${i}`}
+									className="slide-image"
+									fill
+								/>
+							</figure>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
 		</section>
 	);
 };
