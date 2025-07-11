@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import IntroduceUs from "@/components/IntroduceUs";
+import OurPurpose from "@/components/OurPurpose";
 import React from "react";
 
 const Nosotros = () => {
@@ -10,6 +11,7 @@ const Nosotros = () => {
 				title={"Quiénes Somos"}
 			/>
 			<IntroduceUs />
+			<OurPurpose />
 		</div>
 	);
 };
