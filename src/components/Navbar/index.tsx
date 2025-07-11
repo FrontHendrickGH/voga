@@ -14,7 +14,11 @@ const Navbar = () => {
 			<div role="figure" className={styles.gap} />
 			<div className={styles.container}>
 				<nav className={styles.nav}>
-					<Link href={"/"} className={styles.logo}>
+					<Link
+						onClick={setIsOpen.bind(null, false)}
+						href={"/"}
+						className={styles.logo}
+					>
 						<Image
 							src={"/voga-logo.svg"}
 							alt="voga logo"
@@ -33,7 +37,9 @@ const Navbar = () => {
 
 					<ul className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
 						<li>
-							<Link href="/nosotros">Nosotros</Link>
+							<Link onClick={setIsOpen.bind(null, false)} href="/nosotros">
+								Nosotros
+							</Link>
 						</li>
 						<Menu as="li" className={styles.menu}>
 							<MenuButton className={styles.menuButton}>
@@ -45,13 +51,22 @@ const Navbar = () => {
 							</MenuButton>
 							<MenuItems className={styles.menuItems}>
 								<MenuItem>
-									<Link href="#">Nuestra cocina</Link>
+									<Link onClick={setIsOpen.bind(null, false)} href="#">
+										Nuestra cocina
+									</Link>
 								</MenuItem>
 								<MenuItem>
-									<Link href="#">Coordinación</Link>
+									<Link onClick={setIsOpen.bind(null, false)} href="#">
+										Coordinación
+									</Link>
 								</MenuItem>
 								<MenuItem>
-									<Link href="#">Eventos corporativos</Link>
+									<Link
+										onClick={setIsOpen.bind(null, false)}
+										href="/eventos-corporativos"
+									>
+										Eventos corporativos
+									</Link>
 								</MenuItem>
 							</MenuItems>
 						</Menu>
@@ -65,15 +80,21 @@ const Navbar = () => {
 							</MenuButton>
 							<MenuItems className={styles.menuItems}>
 								<MenuItem>
-									<Link href="#">Salón voga</Link>
+									<Link onClick={setIsOpen.bind(null, false)} href="#">
+										Salón voga
+									</Link>
 								</MenuItem>
 								<MenuItem>
-									<Link href="#">Los jardínes</Link>
+									<Link onClick={setIsOpen.bind(null, false)} href="#">
+										Los jardínes
+									</Link>
 								</MenuItem>
 							</MenuItems>
 						</Menu>
 						<li>
-							<Link href="/contacto">Contacto</Link>
+							<Link onClick={setIsOpen.bind(null, false)} href="/contacto">
+								Contacto
+							</Link>
 						</li>
 					</ul>
 				</nav>
