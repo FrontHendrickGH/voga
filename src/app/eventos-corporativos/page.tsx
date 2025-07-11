@@ -18,6 +18,7 @@ const CorporativeEvents = () => {
 			<BringPeople />
 			<MarqueeCorporative />
 			<PresentLounge />
+			<div className="gap-md" />
 			<Footer
 				paddingTop={120}
 				button={{ title: "Contáctanos", href: "#" }}
