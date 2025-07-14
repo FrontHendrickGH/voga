@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import BringPeople from "@/components/BringPeople";
 import Footer from "@/components/Footer";
+import IdealSpace from "@/components/IdealSpace";
 import MarqueeCorporative from "@/components/MarqueeCorporative";
 import PresentLounge from "@/components/PresentLounge";
 import React from "react";
@@ -17,6 +18,7 @@ const CorporativeEvents = () => {
 			/>
 			<BringPeople />
 			<MarqueeCorporative />
+			<IdealSpace />
 			<PresentLounge />
 			<div className="gap-md" />
 			<Footer
