@@ -1,9 +1,15 @@
+"use client";
 import React from "react";
 import classes from "./IdealSpace.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const IdealSpace = () => {
+	const images = ["/ideal-gallery-1.jpg", "/ideal-gallery-1.jpg"];
 	return (
 		<section className={classes.ideal}>
 			<div className={classes.top}>
@@ -108,7 +114,63 @@ const IdealSpace = () => {
 					</li>
 				</ul>
 			</div>
-			<div className={classes.middle}>gallery goes here</div>
+			<div className={classes.middle}>
+				<div className={classes.swiperContainer}>
+					<Swiper
+						modules={[Navigation]}
+						navigation={{
+							nextEl: ".custom-next",
+							prevEl: ".custom-prev",
+						}}
+						loop={true}
+						spaceBetween={0}
+						slidesPerView={1}
+					>
+						{images.map((src, i) => (
+							<SwiperSlide key={i}>
+								<figure className={classes.image}>
+									<Image
+										src={src}
+										alt={`Slide ${i}`}
+										className="slide-image"
+										fill
+									/>
+								</figure>
+							</SwiperSlide>
+						))}
+					</Swiper>
+					<div className={classes.buttons}>
+						<button className="custom-prev">
+							<svg
+								width="12"
+								height="23"
+								viewBox="0 0 12 23"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M5.46392e-07 11.5L12 22.3253L12 0.674682L5.46392e-07 11.5Z"
+									fill="#EDECEB"
+								/>
+							</svg>
+						</button>
+						<button className="custom-next">
+							<svg
+								width="12"
+								height="23"
+								viewBox="0 0 12 23"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M12 11.5L-6.59078e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+									fill="#EDECEB"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
 		</section>
 	);
 };
