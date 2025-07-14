@@ -1,0 +1,106 @@
+@use "../../app/variables" as *;
+.ideal {
+	background-color: $azul;
+	padding-top: 100px;
+	padding-inline: 80px;
+	@media (max-width: 1200px) {
+		padding-top: 0;
+	}
+	@media (max-width: 768px) {
+		padding-inline: 20px;
+	}
+	.top {
+		display: flex;
+		gap: 170px;
+		justify-content: center;
+		margin-bottom: 180px;
+		@media (max-width: 1200px) {
+			flex-direction: column;
+			gap: 60px;
+			margin-bottom: 100px;
+		}
+		@media (max-width: 768px) {
+			margin-bottom: 60px;
+		}
+		h3 {
+			font-family: var(--font-playfair-display);
+			font-size: 3.5rem;
+			font-weight: 400;
+			line-height: 114.286%;
+			max-width: 209px;
+			color: $offWhite;
+			margin-bottom: 60px;
+			@media (max-width: 1200px) {
+				max-width: initial;
+				display: inline-block;
+				margin-bottom: 0;
+			}
+			@media (max-width: 768px) {
+				font-size: 2.4rem;
+			}
+		}
+		figure {
+			@media (max-width: 1200px) {
+				margin-left: 40px;
+				display: inline-block;
+			}
+		}
+		a {
+			margin-top: 50px;
+			display: inline-block;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			font-size: 1.4rem;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 2.8px;
+			text-transform: uppercase;
+			text-align: center;
+			color: $azul;
+			background-color: $offWhite;
+			@media (max-width: 1200px) {
+				font-size: 1.2rem;
+				display: block;
+				max-width: 225px;
+				margin-top: 40px;
+			}
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			flex-wrap: wrap;
+			max-height: 304px;
+			@media (max-width: 768px) {
+				gap: 20px;
+			}
+			@media (max-width: 640px) {
+				max-height: initial;
+			}
+			li {
+				display: flex;
+				gap: 25px;
+				align-items: center;
+				@media (max-width: 768px) {
+					gap: 10px;
+				}
+				img {
+					object-fit: scale-down;
+				}
+				span {
+					font-size: 1.8rem;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 111.111%;
+					letter-spacing: 2.7px;
+					text-transform: uppercase;
+					color: $offWhite;
+					@media (max-width: 768px) {
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+	}
+}
