@@ -25,6 +25,7 @@
 		padding-inline: 30px;
 		padding-block: 38px;
 		gap: 20px;
+		min-height: 120px;
 	}
 	@media (max-width: 640px) {
 		flex-direction: column;
