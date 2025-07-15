@@ -109,6 +109,9 @@
 	.middle {
 		position: relative;
 		margin-bottom: 105px;
+		@media (max-width: 768px) {
+			margin-bottom: 60px;
+		}
 		&::before {
 			position: absolute;
 			content: "";
@@ -185,13 +188,20 @@
 }
 
 .idealBottom {
+	margin-inline: 80px;
+	@media (max-width: 768px) {
+		margin-inline: 20px;
+	}
 	.bottom {
 		display: flex;
 		flex-direction: column;
 		gap: 100px;
 		margin-bottom: 80px;
+		@media (max-width: 768px) {
+			gap: 30px;
+			margin-bottom: 60px;
+		}
 	}
-	margin-inline: 80px;
 	h3 {
 		font-size: 1.8rem;
 		font-style: normal;
@@ -225,6 +235,10 @@
 		}
 		@media (max-width: 1024px) {
 			gap: 80px;
+		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 30px;
 		}
 		> div {
 			flex: 1;
@@ -306,6 +320,7 @@
 	justify-content: center;
 	@media (max-width: 768px) {
 		font-size: 2.4rem;
+		margin-block: 60px;
 	}
 	&::after {
 		position: absolute;
