@@ -4,6 +4,8 @@
 	background-color: $blanco;
 	display: flex;
 	flex-direction: column;
+	max-width: 1440px;
+	align-items: center;
 	gap: 120px;
 	@media (max-width: 1024px) {
 		gap: 80px;

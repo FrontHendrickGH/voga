@@ -5,6 +5,8 @@
 	justify-content: space-evenly;
 	transform: translateY(154px);
 	padding-inline: 80px;
+	max-width: 1440px;
+	width: 100vw;
 	@media (max-width: 1024px) {
 		margin-top: -144px;
 		transform: translateY(204px);
