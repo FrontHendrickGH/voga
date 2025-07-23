@@ -124,9 +124,10 @@
 			left: -80px;
 			right: -80px;
 			background-color: #fff;
-			@media (max-width: 640px) {
+			@media (max-width: 768px) {
 				left: -20px;
 				right: -20px;
+				bottom: -60px;
 			}
 		}
 		.swiperContainer {
@@ -199,11 +200,11 @@
 }
 
 .idealBottom {
-	margin-inline: 80px;
+	padding-inline: 80px;
 	max-width: 987px;
 	width: 100%;
 	@media (max-width: 768px) {
-		margin-inline: 20px;
+		padding-inline: 20px;
 	}
 	.bottom {
 		display: flex;

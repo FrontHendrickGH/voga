@@ -1,6 +1,7 @@
 @use "../../app/variables" as *;
 .marquee {
 	background-color: $azul;
+	max-width: 100vw;
 	.title {
 		text-transform: uppercase;
 		padding-block: 112px;

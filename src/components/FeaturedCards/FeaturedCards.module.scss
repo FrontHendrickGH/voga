@@ -14,6 +14,7 @@
 		}
 		@media (max-width: 640px) {
 			height: 1600px;
+			max-height: initial;
 		}
 		img {
 			object-fit: cover;
