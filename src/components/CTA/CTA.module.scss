@@ -27,12 +27,12 @@
 		padding-block: 38px;
 		gap: 20px;
 		min-height: 120px;
+		margin-inline: auto;
 	}
 	@media (max-width: 640px) {
 		flex-direction: column;
 		text-align: center;
 		padding-block: 30px;
-		margin-inline: auto;
 		width: calc(100vw - 40px);
 	}
 	h3 {
