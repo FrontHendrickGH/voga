@@ -5,10 +5,11 @@ import IdealSpace from "@/components/IdealSpace";
 import MarqueeCorporative from "@/components/MarqueeCorporative";
 import PresentLounge from "@/components/PresentLounge";
 import React from "react";
+import styles from "../page.module.css";
 
 const CorporativeEvents = () => {
 	return (
-		<div>
+		<div className={styles.page}>
 			<Banner
 				title="Eventos Corporativos"
 				image={{
