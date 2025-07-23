@@ -2,18 +2,22 @@
 .chef {
 	margin-top: 80px;
 	margin-bottom: 190px;
+	@media (max-width: 768px) {
+		margin-top: 60px;
+		margin-bottom: 190px;
+	}
 	h3 {
 		font-family: var(--font-playfair-display);
 		font-size: 3.5rem;
 		line-height: 114.286%;
 		color: $azul;
-		padding-bottom: 25px;
 		font-weight: 400;
 		position: relative;
 		text-align: center;
-		margin-bottom: 35px;
+		margin-bottom: 45px;
 		@media (max-width: 768px) {
 			font-size: 2.4rem;
+			margin-bottom: 20px;
 		}
 	}
 	video {
@@ -21,5 +25,8 @@
 		max-height: 540px;
 		height: 100vh;
 		width: 100vw;
+		@media (max-width: 768px) {
+			max-height: 240px;
+		}
 	}
 }
