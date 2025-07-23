@@ -1,12 +1,17 @@
 @use "../../app/variables" as *;
 
 .banner {
+	max-width: 100vw;
+	width: 100%;
 	position: relative;
 	.containerImage {
 		position: relative;
 		width: 100%;
-		max-height: 590px;
 		height: 100vh;
+		max-height: 800px;
+		@media (max-width: 1440px) {
+			max-height: 590px;
+		}
 		img {
 			object-fit: cover;
 		}

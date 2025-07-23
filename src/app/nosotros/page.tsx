@@ -4,10 +4,11 @@ import Footer from "@/components/Footer";
 import IntroduceUs from "@/components/IntroduceUs";
 import OurPurpose from "@/components/OurPurpose";
 import React from "react";
+import styles from "../page.module.css";
 
 const Nosotros = () => {
 	return (
-		<div>
+		<div className={styles.page}>
 			<Banner
 				image={{ src: "/banner-nosotros.png", alt: "sobre nosotros" }}
 				title={"Quiénes Somos"}
