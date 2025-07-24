@@ -83,12 +83,18 @@ const Navbar = () => {
 							</MenuButton>
 							<MenuItems className={styles.menuItems}>
 								<MenuItem>
-									<Link onClick={setIsOpen.bind(null, false)} href="#">
+									<Link
+										onClick={setIsOpen.bind(null, false)}
+										href="/salon-voga"
+									>
 										Salón voga
 									</Link>
 								</MenuItem>
 								<MenuItem>
-									<Link onClick={setIsOpen.bind(null, false)} href="#">
+									<Link
+										onClick={setIsOpen.bind(null, false)}
+										href="/los-jardines"
+									>
 										Los jardínes
 									</Link>
 								</MenuItem>
