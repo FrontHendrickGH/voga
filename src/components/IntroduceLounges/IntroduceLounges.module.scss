@@ -313,7 +313,7 @@
 					font-family: var(--font-playfair-display);
 					font-weight: 400;
 					font-size: 5rem;
-					line-height: 55px;
+					line-height: 114%;
 					letter-spacing: 0.15px;
 					text-transform: uppercase;
 					position: relative;
@@ -325,6 +325,9 @@
 					@media (max-width: 1440px) {
 						max-width: 305px;
 						white-space: nowrap;
+					}
+					@media (max-width: 768px) {
+						font-size: 3rem;
 					}
 				}
 				p {
