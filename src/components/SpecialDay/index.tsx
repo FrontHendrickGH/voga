@@ -32,6 +32,13 @@ const SpecialDay = () => {
 					<Link href={"#"}>Cotiza tu evento</Link>
 				</div>
 			</div>
+			<figure className={classes.weddingImage}>
+				<Image
+					src={"/special-day-image.png"}
+					alt="convierte tu gran día con nosotros!"
+					fill
+				/>
+			</figure>
 		</section>
 	);
 };
