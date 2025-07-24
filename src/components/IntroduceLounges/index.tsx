@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import classes from "./IntroduceLounges.module.scss";
 import Image from "next/image";
 import CTA from "../CTA";
+import Link from "next/link";
 
 interface Props {
 	theme: "Voga" | "Los-jardines";
@@ -222,6 +223,55 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 								</article>
 							);
 						})}
+					</div>
+				</div>
+			</section>
+			<section className={classes.section3}>
+				<div className={classes.container3}>
+					<div className={classes.experience}>
+						<div className={classes.top}>
+							<h3>
+								Vive la
+								<br />
+								experiencia <br />
+								voga
+								<Quote theme={theme} />
+							</h3>
+							<p>
+								Transforma tus sueños en realidad con nuestros servicios de
+								decoración personalizada, banquete gourmet y atención a cada
+								detalle. Nuestro equipo de expertos coordina todo para que
+								disfrutes de una experiencia sin contratiempos.
+							</p>
+						</div>
+						<div className={classes.bottom}>
+							<div className={classes.links}>
+								<h3>Ubicación</h3>
+								<p>{section3.location.title}</p>
+								<Link href={section3.location.link} className={classes.maps}>
+									Ver en Google Maps
+								</Link>
+								<Link href={"telto:+526646861327"}>Tel. (664) 686 1327</Link>
+								<Link href={"mailto:info@vogaeventos.com"}>
+									info@vogaeventos.com
+								</Link>
+							</div>
+							<div className={classes.tour}>
+								<h3>Recorrido 360</h3>
+								<div className={classes.iframeContainer}>
+									<iframe
+										title="Street View Embed"
+										width="100%"
+										height="378"
+										style={{ border: 0 }}
+										loading="lazy"
+										allowFullScreen
+										referrerPolicy="no-referrer-when-downgrade"
+										src="https://www.google.com/maps/embed?pb=!4v1714423779257!6m8!1m7!1sCIHM0ogKEICAgICEi_aCiAE!2m2!1d32.5176361!2d-117.0103787!3f74.5!4f94.53!5f0.7820865974627469"
+									></iframe>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
