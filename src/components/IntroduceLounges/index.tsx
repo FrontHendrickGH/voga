@@ -1,8 +1,13 @@
+"use client";
 import React, { FC } from "react";
 import classes from "./IntroduceLounges.module.scss";
 import Image from "next/image";
 import CTA from "../CTA";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 interface Props {
 	theme: "Voga" | "Los-jardines";
@@ -29,6 +34,11 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 	console.log(theme);
 	const infoLounges = {
 		Voga: {
+			images: [
+				"/voga-gallery-1.jpg",
+				"/voga-gallery-2.jpg",
+				"/voga-gallery-3.jpg",
+			],
 			section1: {
 				title: "Moderno y sofisticado.",
 				capacity: "500",
@@ -78,6 +88,11 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 			},
 		},
 		["Los-jardines"]: {
+			images: [
+				"/los-jardines-gallery-1.jpg",
+				"/los-jardines-gallery-2.jpg",
+				"/los-jardines-gallery-3.jpg",
+			],
 			section1: {
 				title: "Íntimo y acogedor.",
 				capacity: "250",
@@ -157,9 +172,64 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 			backgroundColor: "#EDECEB",
 		},
 	};
-	const { section1, section2, section3 } = infoLounges[theme];
+	const { section1, section2, section3, images } = infoLounges[theme];
 	return (
 		<div className={`${classes.introduce} ${classes[`introduce--${theme}`]}`}>
+			<div className={classes.swiperContainer}>
+				<Swiper
+					modules={[Navigation]}
+					navigation={{
+						nextEl: ".custom-next",
+						prevEl: ".custom-prev",
+					}}
+					loop={true}
+					spaceBetween={0}
+					slidesPerView={1}
+				>
+					{images.map((src, i) => (
+						<SwiperSlide key={i}>
+							<figure className={classes.image}>
+								<Image
+									src={src}
+									alt={`Slide ${i}`}
+									className="slide-image"
+									fill
+								/>
+							</figure>
+						</SwiperSlide>
+					))}
+				</Swiper>
+				<div className={classes.buttons}>
+					<button className="custom-prev">
+						<svg
+							width="12"
+							height="23"
+							viewBox="0 0 12 23"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M5.46392e-07 11.5L12 22.3253L12 0.674682L5.46392e-07 11.5Z"
+								fill="#EDECEB"
+							/>
+						</svg>
+					</button>
+					<button className="custom-next">
+						<svg
+							width="12"
+							height="23"
+							viewBox="0 0 12 23"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M12 11.5L-6.59078e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+								fill="#EDECEB"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
 			<section className={classes.section1}>
 				<div className={classes.container1}>
 					<div className={classes.left}>
