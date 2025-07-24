@@ -8,15 +8,13 @@ import IntroduceLounge from "@/components/IntroduceLounge";
 import PresentLounge from "@/components/PresentLounge";
 import Marquee from "@/components/Marquee";
 import HeroSlider from "@/components/HeroSlider";
+import SpecialDay from "@/components/SpecialDay";
 
 export default function Home() {
 	return (
 		<div className={styles.page}>
 			<HeroSlider />
-			{/* <Banner
-				image={{ src: "/banner-nosotros.png", alt: "sobre nosotros" }}
-				title={"Quiénes Somos"}
-			/> */}
+			<SpecialDay />
 			<CTA
 				backgroundColor="#242C3F"
 				button={{
