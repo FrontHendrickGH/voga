@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import classes from "./IntroduceLounges.module.scss";
 import Image from "next/image";
+import CTA from "../CTA";
 
 interface Props {
 	theme: "Voga" | "Los-jardines";
@@ -41,24 +42,28 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 						title: "Salón Principal",
 						excerpt:
 							"Amplio y adaptable, perfecto para celebraciones majestuosas.",
+						subtitle: "",
 						image: "/voga-article-1.jpg",
 					},
 					{
 						title: "Recepción",
 						excerpt:
 							"Amplia recepción para recibir a tus invitados, perfecta para una excelente primer impresión.",
+						subtitle: "",
 						image: "/voga-article-2.jpg",
 					},
 					{
 						title: "Terraza",
 						excerpt:
 							"Elegancia al aire libre, ideal para cócteles y momentos inolvidables.",
+						subtitle: "",
 						image: "/voga-article-3.jpg",
 					},
 					{
 						title: "Área de Jardín",
 						excerpt:
 							"Un toque natural para eventos sofisticados en un entorno exclusivo.",
+						subtitle: "",
 						image: "/voga-article-4.jpg",
 					},
 				],
@@ -84,21 +89,38 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 				articles: [
 					{
 						title: "Jardín Principal",
-						subtitle: "Naturaleza y elegancia en armonía",
+						subtitle: (
+							<span>
+								Naturaleza y elegancia
+								<br />
+								en armonía
+							</span>
+						),
 						excerpt:
 							"Amplio y adaptable, perfecto para celebraciones majestuosas.",
 						image: "/los-jardines-article-1.jpg",
 					},
 					{
 						title: "Salón",
-						subtitle: "Versatilidad y estilo clásico",
+						subtitle: (
+							<span>
+								Versatilidad
+								<br /> y estilo clásico
+							</span>
+						),
 						excerpt:
 							"El salón de Los Jardines ofrece un espacio cerrado y elegante. La división con salida a terraza permite adaptar el espacio según tus necesidades.",
 						image: "/los-jardines-article-2.jpg",
 					},
 					{
 						title: "Terraza",
-						subtitle: "Un espacio para relajarse y socializar",
+						subtitle: (
+							<span>
+								Un espacio para
+								<br />
+								relajarse y socializar
+							</span>
+						),
 						excerpt:
 							"La terraza de Los Jardines complementa perfectamente el salón, funcionando como un área de descanso o como parte integral del evento.",
 						image: "/los-jardines-article-3.jpg",
@@ -112,6 +134,26 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 					link: "https://www.google.com/maps/dir/Los+Jardines/Los+Jardines,+Escuadr%C3%B3n+201+3188,+Aviacion,+22014+Tijuana,+B.C./@32.5077764,-117.0216737,13z/data=!4m13!4m12!1m5!1m1!1s0x80d9483e3ff909c3:0x2bf024241f31e1df!2m2!1d-117.0094852!2d32.516541!1m5!1m1!1s0x80d9483e3ff909c3:0x2bf024241f31e1df!2m2!1d-117.0094852!2d32.516541?entry=ttu&g_ep=EgoyMDI1MDcyMS4wIKXMDSoASAFQAw%3D%3D",
 				},
 			},
+		},
+	};
+	const CTAProps = {
+		title: {
+			title: (
+				<span>
+					Celebra tus momentos
+					<br />
+					más importantes con nosotros
+				</span>
+			),
+			color: theme === "Voga" ? "#EDECEB" : "#242C3F",
+		},
+		isFloating: false,
+		backgroundColor: theme === "Voga" ? "#449F82" : "#9CB731",
+		button: {
+			title: "Agenda una visita",
+			link: "#",
+			color: "#242C3F",
+			backgroundColor: "#EDECEB",
 		},
 	};
 	const { section1, section2, section3 } = infoLounges[theme];
@@ -148,6 +190,39 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 					<figure className={classes.right}>
 						<Image src={section1.image} alt={`${theme} image`} fill />
 					</figure>
+				</div>
+			</section>
+			<CTA {...CTAProps} />
+			<section className={classes.section2}>
+				<div className={classes.container2}>
+					<div className={classes.articles}>
+						{section2.articles.map((article, i) => {
+							const { title, excerpt, image, subtitle } = article;
+							return (
+								<article key={i}>
+									<div>
+										<h3>{title}</h3>
+										{subtitle && subtitle} <p>{excerpt}</p>
+										<svg
+											width="90"
+											height="12"
+											viewBox="0 0 90 12"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M89.5303 6.53033C89.8232 6.23744 89.8232 5.76256 89.5303 5.46967L84.7574 0.696699C84.4645 0.403806 83.9896 0.403806 83.6967 0.696699C83.4038 0.989593 83.4038 1.46447 83.6967 1.75736L87.9393 6L83.6967 10.2426C83.4038 10.5355 83.4038 11.0104 83.6967 11.3033C83.9896 11.5962 84.4645 11.5962 84.7574 11.3033L89.5303 6.53033ZM0 6.75H89V5.25H0V6.75Z"
+												fill="#EDECEB"
+											/>
+										</svg>
+									</div>
+									<figure>
+										<Image src={image} alt={`${theme} imagen #${i + 1}`} fill />
+									</figure>
+								</article>
+							);
+						})}
+					</div>
 				</div>
 			</section>
 		</div>
