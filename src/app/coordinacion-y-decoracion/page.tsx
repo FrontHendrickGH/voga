@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import PerfectCoordination from "@/components/PerfectCoordination";
+import CustomDecoration from "@/components/CustomDecoration";
 
 const index = () => {
 	return (
@@ -14,6 +15,7 @@ const index = () => {
 				}}
 			/>
 			<PerfectCoordination />
+			<CustomDecoration />
 			<Footer
 				paddingTop={120}
 				button={{ title: "Contáctanos", href: "#" }}
