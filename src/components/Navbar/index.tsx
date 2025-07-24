@@ -59,7 +59,10 @@ const Navbar = () => {
 									</Link>
 								</MenuItem>
 								<MenuItem>
-									<Link onClick={setIsOpen.bind(null, false)} href="#">
+									<Link
+										onClick={setIsOpen.bind(null, false)}
+										href="/coordinacion-y-decoracion"
+									>
 										Coordinación
 									</Link>
 								</MenuItem>
