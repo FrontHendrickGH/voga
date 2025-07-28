@@ -1,3 +1,172 @@
+@use "../../app/variables" as *;
 .custom {
-	padding-top: 250px;
+	margin-block: 250px 90px;
+	padding-inline: 80px;
+	display: flex;
+	justify-content: center;
+	@media (max-width: 1024px) {
+		margin-block: 90px;
+	}
+	@media (max-width: 768px) {
+		padding-inline: 20px;
+		margin-block: 60px;
+	}
+	.container {
+		max-width: 1536px;
+		width: 100%;
+		@media (max-width: 2056px) {
+			max-width: 1064px;
+		}
+		.containerTitle {
+			span {
+				font-size: 1.8rem;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 111.111%;
+				letter-spacing: 2.7px;
+				text-transform: uppercase;
+				color: $azul;
+			}
+			h3 {
+				margin-block: 64px;
+				font-size: 5rem;
+				font-family: var(--font-playfair-display);
+				font-style: normal;
+				font-weight: 400;
+				line-height: 110%;
+				letter-spacing: 1.5px;
+				text-transform: uppercase;
+				max-width: 652px;
+				color: $coordinacion;
+				@media (max-width: 768px) {
+					font-size: 3rem;
+					letter-spacing: 0.8px;
+					margin-block: 35px;
+				}
+			}
+		}
+	}
+	.bottom {
+		display: flex;
+		justify-content: space-between;
+		gap: 60px;
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			gap: 25px;
+		}
+		p {
+			font-size: 1.5rem;
+			line-height: 19px;
+			letter-spacing: 0px;
+			color: $azul;
+		}
+		.left {
+			p {
+				max-width: 522px;
+				margin-bottom: 70px;
+				@media (max-width: 1024px) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+		.right {
+			@media (max-width: 1440px) {
+				max-width: 414px;
+			}
+			p {
+				margin-bottom: 40px;
+				@media (max-width: 1024px) {
+					margin-bottom: 25px;
+				}
+			}
+			.filledList {
+				margin-bottom: 60px;
+				@media (max-width: 1024px) {
+					margin-bottom: 25px;
+				}
+				li {
+					padding-block: 25px;
+					display: flex;
+					gap: 18px;
+					text-transform: uppercase;
+					border-bottom: 0.75px solid $azul;
+					font-weight: 600;
+					font-size: 1.5rem;
+					line-height: 18px;
+					letter-spacing: 1.5px;
+					&:first-child {
+						border-top: 0.75px solid $azul;
+					}
+				}
+			}
+			.simpleList {
+				font-size: 1.5rem;
+				line-height: 27px;
+				letter-spacing: 0px;
+				color: $azul;
+				margin-left: 20px;
+			}
+		}
+	}
+	.swiperContainer {
+		width: 626px;
+		height: 780px;
+		position: relative;
+		z-index: 3;
+		@media (max-width: 1440px) {
+			width: 522px;
+			height: 650px;
+		}
+		@media (max-width: 1024px) {
+			height: 520px;
+			width: 418px;
+		}
+		@media (max-width: 768px) {
+			width: 376px;
+			height: 416px;
+			max-width: 100%;
+		}
+		// @media (max-width: 640px) {
+		// 	max-height: 250px;
+		// }
+		.image {
+			position: relative;
+			width: 626px;
+			height: 780px;
+			@media (max-width: 1440px) {
+				width: 522px;
+				height: 650px;
+			}
+			@media (max-width: 1024px) {
+				height: 520px;
+				width: 418px;
+			}
+			@media (max-width: 768px) {
+				width: 376px;
+				height: 416px;
+				max-width: 100%;
+			}
+			// @media (max-width: 640px) {
+			// 	height: 250px;
+			// }
+		}
+		.buttons {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 38px;
+			z-index: 3;
+			right: 38px;
+			display: flex;
+			justify-content: space-between;
+			@media (max-width: 768px) {
+				left: 20px;
+				right: 20px;
+			}
+			button {
+				border: none;
+				background-color: transparent;
+			}
+		}
+	}
 }
