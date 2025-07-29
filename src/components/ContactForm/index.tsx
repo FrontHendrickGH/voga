@@ -123,8 +123,10 @@ const ContactForm = () => {
 								400-500
 							</label>
 						</fieldset>
-						<div className={classes.inputContainer}>
-							<p>Fecha del evento</p>
+						<div
+							className={`${classes.inputContainer} ${classes.inputContainerDate}`}
+						>
+							<p>Fecha del evento *</p>
 							<select name="day" id="day">
 								<option value="" disabled>
 									Día
@@ -158,11 +160,9 @@ const ContactForm = () => {
 
 						{error && <p className={classes.error}>{error}</p>}
 						{success && <p className={classes.error}>{success}</p>}
-						<div className={classes.buttons}>
-							<button type="submit" className={classes.submit}>
-								Enviar
-							</button>
-						</div>
+						<button type="submit" className={classes.submit}>
+							Enviar
+						</button>
 					</form>
 				</div>
 			</div>
