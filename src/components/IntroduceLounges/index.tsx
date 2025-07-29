@@ -330,14 +330,12 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 								<h3>Recorrido 360</h3>
 								<div className={classes.iframeContainer}>
 									<iframe
-										title="Street View Embed"
-										width="100%"
-										height="378"
-										style={{ border: 0 }}
 										loading="lazy"
+										src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2smx!4v1468824524559!6m8!1m7!1sYJPzxchvaX0AAAQvO6Uosg!2m2!1d32.51763296697016!2d-117.0104182250094!3f57!4f0!5f0.7820865974627469"
+										width="100%"
+										height="450"
+										frameBorder="0"
 										allowFullScreen
-										referrerPolicy="no-referrer-when-downgrade"
-										src="https://www.google.com/maps/embed?pb=!4v1714423779257!6m8!1m7!1sCIHM0ogKEICAgICEi_aCiAE!2m2!1d32.5176361!2d-117.0103787!3f74.5!4f94.53!5f0.7820865974627469"
 									></iframe>
 								</div>
 							</div>
