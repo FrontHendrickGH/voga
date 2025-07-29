@@ -44,6 +44,24 @@
 				text-transform: uppercase;
 			}
 			.formContent {
+				display: flex;
+				flex-direction: column;
+				button {
+					align-self: flex-end;
+					background-color: $azul;
+					border: none;
+					text-align: center;
+					font-weight: 700;
+					font-size: 1.4rem;
+					line-height: 18px;
+					letter-spacing: 2.8px;
+					text-align: center;
+					text-transform: uppercase;
+					color: $offWhite;
+					padding: 10px 64px;
+					cursor: pointer;
+					margin-top: 20px;
+				}
 				h3 {
 					font-weight: 700;
 					font-size: 1.8rem;
@@ -53,6 +71,10 @@
 					margin-bottom: 30px;
 				}
 				.inputContainer {
+					letter-spacing: 0px;
+					select {
+						appearance: none;
+					}
 					&Event {
 						display: flex;
 						flex-direction: column;
@@ -60,7 +82,19 @@
 						margin-bottom: 20px;
 						select {
 							max-width: 522px;
-							appearance: none;
+							width: 100%;
+						}
+					}
+					&Date {
+						p {
+							margin-bottom: 20px;
+						}
+						select {
+							margin-right: 20px;
+							min-width: 198px;
+							&:last-child {
+								margin-right: 0;
+							}
 						}
 					}
 				}
@@ -79,6 +113,22 @@
 					margin-bottom: 40px;
 					legend {
 						margin-bottom: 20px;
+						letter-spacing: 0;
+					}
+					label {
+						letter-spacing: 0px;
+						margin-right: 40px;
+						display: inline-flex;
+						flex-direction: column;
+						gap: 10px;
+						align-items: center;
+						&:last-child {
+							margin-right: 0;
+						}
+						input {
+							height: 24px;
+							width: 24px;
+						}
 					}
 				}
 			}
