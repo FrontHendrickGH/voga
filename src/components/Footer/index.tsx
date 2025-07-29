@@ -52,13 +52,28 @@ const Footer: FC<Props> = ({ paddingTop, description, title, button }) => {
 						</div>
 						<div className={classes.bottomLinks}>
 							<li>
-								<Link href={"#"}>Facebook</Link>
+								<Link
+									href={"https://www.facebook.com/VogaEventos"}
+									target="_blank"
+								>
+									Facebook
+								</Link>
 							</li>
 							<li>
-								<Link href={"#"}>Instagram</Link>
+								<Link
+									href={"https://www.instagram.com/voga.eventos/"}
+									target="_blank"
+								>
+									Instagram
+								</Link>
 							</li>
 							<li>
-								<Link href={"#"}>Youtube</Link>
+								<Link
+									href={"https://www.youtube.com/@VogaEventos"}
+									target="_blank"
+								>
+									Youtube
+								</Link>
 							</li>
 						</div>
 					</ul>
