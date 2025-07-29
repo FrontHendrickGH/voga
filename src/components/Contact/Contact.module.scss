@@ -1,0 +1,14 @@
+.contact {
+	padding-inline: 80px;
+	display: flex;
+	justify-content: center;
+	.container {
+		width: 100%;
+		max-width: 1536px;
+		.map {
+			position: relative;
+			max-width: 100vw;
+			height: 450px;
+		}
+	}
+}

@@ -1,9 +1,11 @@
 import React from "react";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 const Contacto = () => {
 	return (
 		<div>
+			<Contact />
 			<Footer
 				paddingTop={120}
 				button={{ title: "Contáctanos", href: "/contacto" }}
