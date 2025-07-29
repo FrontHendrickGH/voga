@@ -54,6 +54,7 @@ const Navbar = () => {
 									<Link
 										onClick={setIsOpen.bind(null, false)}
 										href="/nuestra-cocina"
+										className={styles.cuisine}
 									>
 										Nuestra cocina
 									</Link>
@@ -62,6 +63,7 @@ const Navbar = () => {
 									<Link
 										onClick={setIsOpen.bind(null, false)}
 										href="/coordinacion-y-decoracion"
+										className={styles.coordination}
 									>
 										Coordinación
 									</Link>
@@ -70,6 +72,7 @@ const Navbar = () => {
 									<Link
 										onClick={setIsOpen.bind(null, false)}
 										href="/eventos-corporativos"
+										className={styles.corporatives}
 									>
 										Eventos corporativos
 									</Link>
@@ -89,6 +92,7 @@ const Navbar = () => {
 									<Link
 										onClick={setIsOpen.bind(null, false)}
 										href="/salon-voga"
+										className={styles.corporatives}
 									>
 										Salón voga
 									</Link>
@@ -97,6 +101,7 @@ const Navbar = () => {
 									<Link
 										onClick={setIsOpen.bind(null, false)}
 										href="/los-jardines"
+										className={styles.garden}
 									>
 										Los jardínes
 									</Link>

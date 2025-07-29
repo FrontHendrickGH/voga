@@ -91,6 +91,26 @@
 			color: $gray;
 		}
 	}
+	&.corporatives {
+		&:hover {
+			color: $venue;
+		}
+	}
+	&.cuisine {
+		&:hover {
+			color: $cocina;
+		}
+	}
+	&.coordination {
+		&:hover {
+			color: $coordinacion;
+		}
+	}
+	&.garden {
+		&:hover {
+			color: $jardines1;
+		}
+	}
 }
 
 /* Dropdown menu */
