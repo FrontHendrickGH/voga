@@ -77,7 +77,7 @@ const Contact = () => {
 				</div>
 				<div className={classes.map}>
 					<Image
-						src={"/location-map.jpg"}
+						src={"/location-map-ss.png"}
 						alt="Ubicación de nuestros salones"
 						fill
 					/>
