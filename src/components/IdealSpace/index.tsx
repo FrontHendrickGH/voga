@@ -31,7 +31,7 @@ const IdealSpace = () => {
 								/>
 							</svg>
 						</figure>
-						<Link href={"#"}>Cotiza tu evento</Link>
+						<Link href={"/contacto"}>Cotiza tu evento</Link>
 					</div>
 					<ul>
 						<li>
@@ -246,7 +246,7 @@ const IdealSpace = () => {
 					title: "Agenda ahora",
 					backgroundColor: "#449F82",
 					color: "#EDECEB",
-					link: "#",
+					link: "/contacto",
 				}}
 			/>
 			<h3 className={classes.secondaryTitle}>Conoce nuestros salones.</h3>

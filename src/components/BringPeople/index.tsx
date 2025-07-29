@@ -39,7 +39,7 @@ const BringPeople = () => {
 					title: "Cotiza gratis",
 					backgroundColor: "#449F82",
 					color: "#EDECEB",
-					link: "#",
+					link: "/contacto",
 				}}
 				title={{
 					title: (

@@ -35,7 +35,7 @@ const FeaturedCards = () => {
 							<br />
 							en tijuana
 						</p>
-						<Link href={"#"}>Cotiza ahora</Link>
+						<Link href={"/contacto"}>Cotiza ahora</Link>
 					</article>
 					<article className={classes.card}>
 						<svg
@@ -55,7 +55,7 @@ const FeaturedCards = () => {
 						<p>
 							XV AÑOS Y SWEET SIXTEEN <br /> INOLVIDABLES <br /> EN TIJUANA
 						</p>
-						<Link href={"#"}>Cotiza ahora</Link>
+						<Link href={"/contacto"}>Cotiza ahora</Link>
 					</article>
 					<article className={classes.card}>
 						<svg
@@ -77,7 +77,7 @@ const FeaturedCards = () => {
 							PARA GRADUACIONES
 							<br /> EN TIJUANA
 						</p>
-						<Link href={"#"}>Cotiza ahora</Link>
+						<Link href={"/contacto"}>Cotiza ahora</Link>
 					</article>
 					<article className={classes.card}>
 						<svg
@@ -99,7 +99,7 @@ const FeaturedCards = () => {
 							<br /> espacio elegante y profesional <br />
 							EN TIJUANA
 						</p>
-						<Link href={"#"}>Cotiza ahora</Link>
+						<Link href={"/contacto"}>Cotiza ahora</Link>
 					</article>
 					<article className={classes.card}>
 						<svg
@@ -121,7 +121,7 @@ const FeaturedCards = () => {
 							<br /> de manera única <br />
 							en Tijuana
 						</p>
-						<Link href={"#"}>Cotiza ahora</Link>
+						<Link href={"/contacto"}>Cotiza ahora</Link>
 					</article>
 					<article className={classes.card}>
 						<svg
@@ -143,7 +143,7 @@ const FeaturedCards = () => {
 							<br /> una nueva vida en un evento
 							<br /> lleno de amor
 						</p>
-						<Link href={"#"}>Cotiza ahora</Link>
+						<Link href={"/contacto"}>Cotiza ahora</Link>
 					</article>
 				</div>
 			</div>

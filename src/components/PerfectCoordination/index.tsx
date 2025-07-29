@@ -51,7 +51,7 @@ const PerfectCoordination = () => {
 					title: "Llámanos",
 					color: "#242C3F",
 					backgroundColor: "#EDECEB",
-					link: "#",
+					link: "/contacto",
 				}}
 				title={{
 					title: (

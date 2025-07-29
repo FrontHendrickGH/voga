@@ -17,7 +17,7 @@ const OurPurpose = () => {
 				de cada evento le aseguran a nuestros clientes una experiencia sin
 				contratiempos.
 			</p>
-			<Link href={"#"}>Cotiza tu evento</Link>
+			<Link href={"/contacto"}>Cotiza tu evento</Link>
 		</section>
 	);
 };

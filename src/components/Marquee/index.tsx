@@ -15,7 +15,7 @@ const Marquee = () => {
 			>
 				<h1 className={classes.title}>celebra con nosotros &nbsp;</h1>
 			</MarqueeC>
-			<Link href={"#"} className={classes.link}>
+			<Link href={"/contacto"} className={classes.link}>
 				Cotiza tu evento
 			</Link>
 		</div>

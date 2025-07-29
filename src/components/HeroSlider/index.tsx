@@ -19,7 +19,7 @@ const HeroSlider = () => {
 				</span>
 			),
 			button: {
-				link: "#",
+				link: "/contacto",
 				title: "Cotiza Ahora",
 				color: "#242C3F",
 				backgroundColor: "#EDECEB",
@@ -34,7 +34,7 @@ const HeroSlider = () => {
 				</span>
 			),
 			button: {
-				link: "#",
+				link: "/contacto",
 				title: "Cotiza Ahora",
 				color: "#EDECEB",
 				backgroundColor: "#242C3F",
@@ -49,7 +49,7 @@ const HeroSlider = () => {
 				</span>
 			),
 			button: {
-				link: "#",
+				link: "/contacto",
 				title: "Cotiza Ahora",
 				color: "#EDECEB",
 				backgroundColor: "#242C3F",
@@ -64,7 +64,7 @@ const HeroSlider = () => {
 				</span>
 			),
 			button: {
-				link: "#",
+				link: "/contacto",
 				title: "Cotiza Ahora",
 				color: "#EDECEB",
 				backgroundColor: "#242C3F",

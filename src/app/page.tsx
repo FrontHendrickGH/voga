@@ -19,7 +19,7 @@ export default function Home() {
 				backgroundColor="#242C3F"
 				button={{
 					title: "Agenda ahora",
-					link: "#",
+					link: "/contacto",
 					backgroundColor: "#449F82",
 					color: "#EDECEB",
 				}}

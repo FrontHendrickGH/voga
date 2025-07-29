@@ -32,7 +32,7 @@ const TwoCards = () => {
 						Sorprende a tus invitados con una experiencia
 						<br /> gastronómica excepcional
 					</p>
-					<Link href={"#"} className={classes.link}>
+					<Link href={"/nuestra-cocina"} className={classes.link}>
 						Descúbrela
 					</Link>
 				</div>
@@ -64,7 +64,7 @@ const TwoCards = () => {
 						Disfruta de tu celebración <br />
 						sin preocupaciones.
 					</p>
-					<Link href={"#"} className={classes.link}>
+					<Link href={"/coordinacion-y-decoracion"} className={classes.link}>
 						Descúbrela
 					</Link>
 				</div>

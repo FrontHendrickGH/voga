@@ -9,7 +9,7 @@ const SalonVoga = () => {
 			<IntroduceLounges theme="Voga" />
 			<Footer
 				paddingTop={216}
-				button={{ title: "Agenda una visita", href: "#" }}
+				button={{ title: "Agenda una visita", href: "/contacto" }}
 				title="¡Planeemos el evento de tus sueños juntos!"
 				description="Contáctanos para agendar una visita y descubre cómo podemos hacer de tu evento una experiencia única."
 			/>

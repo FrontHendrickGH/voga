@@ -89,7 +89,7 @@ const SurpriseGuests = () => {
 						button={{
 							backgroundColor: "#EDECEB",
 							color: "#242C3F",
-							link: "#",
+							link: "/contacto",
 							title: "Llámanos",
 						}}
 					/>
