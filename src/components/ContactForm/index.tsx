@@ -107,17 +107,19 @@ const ContactForm = () => {
 							<label htmlFor="event">
 								¿Que tipo de evento quieres realizar? *
 							</label>
-							<select name="event" id="event">
-								<option value="" disabled>
-									Selecciona una opción
-								</option>
-								<option value="Boda">Boda</option>
-								<option value="XV">XV años</option>
-								<option value="Graduaciones">Graduaciones</option>
-								<option value="Corporativo">Corporativo</option>
-								<option value="Despedidas">Despedidas</option>
-								<option value="Baby-shower">Baby Shower</option>
-							</select>
+							<div
+								className={`${classes.selectContainer} ${classes.selectContainerWidth}`}
+							>
+								<select name="event" id="event" required>
+									<option value="">Selecciona una opción</option>
+									<option value="Boda">Boda</option>
+									<option value="XV">XV años</option>
+									<option value="Graduaciones">Graduaciones</option>
+									<option value="Corporativo">Corporativo</option>
+									<option value="Despedidas">Despedidas</option>
+									<option value="Baby-shower">Baby Shower</option>
+								</select>
+							</div>
 						</div>
 						<fieldset>
 							<legend>Numero de invitados *</legend>
@@ -150,35 +152,41 @@ const ContactForm = () => {
 							className={`${classes.inputContainer} ${classes.inputContainerDate}`}
 						>
 							<p>Fecha del evento *</p>
-							<select name="day" id="day">
-								<option value="" disabled>
-									Día
-								</option>
-								{Array.from({ length: 31 }, (_, i) => (
-									<option key={i + 1} value={i + 1}>
-										{i + 1}
-									</option>
-								))}
-							</select>
-							<select name="month" id="month">
-								<option value="" disabled>
-									Mes
-								</option>
-								{Array.from({ length: 12 }, (_, i) => (
-									<option key={i + 1} value={i + 1}>
-										{i + 1}
-									</option>
-								))}
-							</select>
-							<select name="year" id="year">
-								<option value="" disabled>
-									Año
-								</option>
-								<option value={2025}>2025</option>
-								<option value={2026}>2026</option>
-								<option value={2027}>2027</option>
-								<option value={2028}>2028</option>
-							</select>
+							<div
+								className={`${classes.selectContainer} ${classes.selectContainerDate}`}
+							>
+								<select name="day" id="day" required>
+									<option value="">Día</option>
+									{Array.from({ length: 31 }, (_, i) => (
+										<option key={i + 1} value={i + 1}>
+											{i + 1}
+										</option>
+									))}
+								</select>
+							</div>
+							<div
+								className={`${classes.selectContainer} ${classes.selectContainerDate}`}
+							>
+								<select name="month" id="month" required>
+									<option value="">Mes</option>
+									{Array.from({ length: 12 }, (_, i) => (
+										<option key={i + 1} value={i + 1}>
+											{i + 1}
+										</option>
+									))}
+								</select>
+							</div>
+							<div
+								className={`${classes.selectContainer} ${classes.selectContainerDate}`}
+							>
+								<select name="year" id="year" required>
+									<option value="">Año</option>
+									<option value={2025}>2025</option>
+									<option value={2026}>2026</option>
+									<option value={2027}>2027</option>
+									<option value={2028}>2028</option>
+								</select>
+							</div>
 						</div>
 						<h3>2. Datos personales</h3>
 						<div
