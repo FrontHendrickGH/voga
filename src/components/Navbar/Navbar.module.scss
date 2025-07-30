@@ -1,5 +1,10 @@
 @use "../../app/variables" as *;
 .container {
+	a {
+		&::after {
+			content: none;
+		}
+	}
 	position: fixed;
 	top: 0;
 	z-index: 100000;
