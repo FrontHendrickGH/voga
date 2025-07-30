@@ -82,6 +82,9 @@
 			margin-bottom: 150px;
 			color: $offWhite;
 			background-color: $azul;
+			&::after {
+				background-color: rgba(80, 180, 255, 0.2);
+			}
 			@media (max-width: 1200px) {
 				margin-bottom: 0px;
 			}
@@ -194,6 +197,9 @@
 				letter-spacing: 2.8px;
 				text-transform: uppercase;
 				margin-bottom: 58px;
+				&::after {
+					background-color: rgba(80, 180, 255, 0.2);
+				}
 				@media (max-width: 640px) {
 					margin-bottom: 30px;
 					font-size: 1.2rem;

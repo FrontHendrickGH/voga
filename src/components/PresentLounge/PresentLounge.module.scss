@@ -115,6 +115,9 @@
 				color: $offWhite;
 				&:first-child {
 					background-color: $azul;
+					&::after {
+						background-color: rgba(80, 180, 255, 0.2);
+					}
 				}
 				&:last-child {
 					background-color: $venue;

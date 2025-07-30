@@ -54,6 +54,9 @@
 		margin-bottom: 150px;
 		color: $offWhite;
 		background-color: $azul;
+		&::after {
+			background-color: rgba(80, 180, 255, 0.2);
+		}
 		@media (max-width: 768px) {
 			font-size: 1.2rem;
 			margin-bottom: 60px;

@@ -39,5 +39,8 @@
 		padding: 10px 25px;
 		display: inline-block;
 		margin-top: 60px;
+		&::after {
+			background-color: rgba(80, 180, 255, 0.2);
+		}
 	}
 }
