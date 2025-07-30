@@ -8,7 +8,7 @@ const ContactForm = () => {
 	const [error, setError] = useState("");
 	const [success, setSuccess] = useState("");
 
-	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+	const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
 		if (!form || !form.current) return;
 		e.preventDefault();
 
@@ -20,12 +20,33 @@ const ContactForm = () => {
 			day,
 			month,
 			year,
+			phone,
+			name,
+			email,
+			message,
 			// "g-recaptcha-response": captcha,
 		} = Object.fromEntries(dataForm.entries());
+		console.log(!isValidated);
 
-		console.log({ event, numberOfGuests, day, month, year });
+		const res = await fetch("/api/send-email", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+				event,
+				numberOfGuests,
+				day,
+				month,
+				year,
+				phone,
+				name,
+				email,
+				message,
+			}),
+		});
+		console.log(res);
 
-		if (!isValidated) {
+		return;
+		if (isValidated) {
 			setSuccess("");
 			setIsValidated(false);
 			setError("Por favor, verifica el captcha");
@@ -156,6 +177,46 @@ const ContactForm = () => {
 								<option value={2027}>2027</option>
 								<option value={2028}>2028</option>
 							</select>
+						</div>
+						<h3>2. Datos personales</h3>
+						<div
+							className={`${classes.inputContainer} ${classes.inputContainerName}`}
+						>
+							<input
+								type="text"
+								name="name"
+								id="name"
+								required
+								placeholder="Nombre *"
+							/>
+						</div>
+						<div className={classes.inputs}>
+							<div className={classes.inputContainer}>
+								<input
+									type="email"
+									name="email"
+									id="email"
+									required
+									placeholder="Email *"
+								/>
+							</div>
+							<div className={classes.inputContainer}>
+								<input
+									type="text"
+									name="phone"
+									id="phone"
+									placeholder="Teléfono"
+								/>
+							</div>
+						</div>
+						<div
+							className={`${classes.inputContainer} ${classes.inputContainerArea}`}
+						>
+							<textarea
+								name="message"
+								id="message"
+								placeholder="Mensaje"
+							></textarea>
 						</div>
 
 						{error && <p className={classes.error}>{error}</p>}
