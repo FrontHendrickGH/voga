@@ -112,16 +112,11 @@
 	}
 	.weddingImage {
 		position: relative;
-		max-width: 100vw;
+		max-width: 1440px;
 		width: 100%;
-		height: 1707px;
+		height: 960px;
 		margin-bottom: 120px;
-		@media (max-width: 2056px) {
-			height: 1371px;
-		}
-		@media (max-width: 1440px) {
-			height: 960px;
-		}
+		margin-inline: auto;
 		@media (max-width: 1024px) {
 			height: 683px;
 			margin-bottom: 180px;
@@ -132,6 +127,9 @@
 		}
 		@media (max-width: 640px) {
 			height: 427px;
+		}
+		img {
+			object-fit: scale-down;
 		}
 	}
 }
