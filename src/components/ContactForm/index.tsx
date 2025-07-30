@@ -94,7 +94,7 @@ const ContactForm = () => {
 					<p className={classes.complete}>
 						Completa la siguiente forma para recibir nuestra información
 						detallada
-						<br />y poder iniciar con los plane s de tu evento
+						<br />y poder iniciar con los planes de tu evento
 					</p>
 					<p className={classes.required}>
 						Los campos marcados * son requeridos
