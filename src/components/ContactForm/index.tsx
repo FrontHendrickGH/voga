@@ -1,16 +1,21 @@
 "use client";
 import React, { useState, useRef } from "react";
 import classes from "./ContactForm.module.scss";
+import Turnstile from "react-turnstile";
 
 const ContactForm = () => {
 	const form = useRef<HTMLFormElement>(null);
-	const [isValidated, setIsValidated] = useState(false);
 	const [error, setError] = useState("");
+	const [token, setToken] = useState("");
 	const [success, setSuccess] = useState("");
 
 	const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
 		if (!form || !form.current) return;
 		e.preventDefault();
+
+		if (!token) {
+			return setError("Por favor resuelve el CAPTCHA");
+		}
 
 		const dataForm = new FormData(form.current);
 
@@ -24,9 +29,35 @@ const ContactForm = () => {
 			name,
 			email,
 			message,
-			// "g-recaptcha-response": captcha,
 		} = Object.fromEntries(dataForm.entries());
-		console.log(!isValidated);
+
+		if (
+			!name ||
+			!email ||
+			!event ||
+			!numberOfGuests ||
+			!day ||
+			!month ||
+			!year
+		) {
+			return setError(
+				"Por favor, cuentanós un poco más sobre tus necesidades para tu proximo evento"
+			);
+		}
+
+		const resCaptcha = await fetch("/api/validate-turnstile", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ token }),
+		});
+
+		const dataCaptcha = await resCaptcha.json();
+
+		if (!dataCaptcha.success) {
+			setSuccess("");
+			setError("Captcha inválido");
+			return e.preventDefault();
+		}
 
 		const res = await fetch("/api/send-email", {
 			method: "POST",
@@ -43,43 +74,14 @@ const ContactForm = () => {
 				message,
 			}),
 		});
-		console.log(res);
 
-		return;
-		if (isValidated) {
-			setSuccess("");
-			setIsValidated(false);
-			setError("Por favor, verifica el captcha");
-			return e.preventDefault();
+		const data = await res.json();
+
+		if (data.success) {
+			form.current.reset();
+			setError("");
+			setSuccess("Pronto nos pondremos en contacto con usted");
 		}
-
-		// if (!name || !email || !message) {
-		// 	setSuccess("");
-		// 	return setError("Por favor, cuentanós un poco más sobre ti");
-		// }
-
-		// if (name && email && captcha && message) {
-		// 	return;
-		// emailjs
-		// 	.sendForm(keys.service_id, keys.template_id, form.current, {
-		// 		publicKey: keys.email_key,
-		// 	})
-		// 	.then(
-		// 		() => {
-		// 			console.log("SUCCESS!");
-		// 			form.current?.reset();
-		// 			setSuccess("Pronto nos pondremos con contacto con usted");
-		// 		},
-		// 		error => {
-		// 			console.log(process.env.SERVICE_ID);
-
-		// 			console.log(error);
-
-		// 			setSuccess("");
-		// 			console.log("FAILED...", error.text);
-		// 		}
-		// 	);
-		// }
 	};
 
 	return (
@@ -92,7 +94,7 @@ const ContactForm = () => {
 					<p className={classes.complete}>
 						Completa la siguiente forma para recibir nuestra información
 						detallada
-						<br />y poder iniciar con los planes de tu evento
+						<br />y poder iniciar con los plane s de tu evento
 					</p>
 					<p className={classes.required}>
 						Los campos marcados * son requeridos
@@ -219,11 +221,24 @@ const ContactForm = () => {
 							></textarea>
 						</div>
 
-						{error && <p className={classes.error}>{error}</p>}
-						{success && <p className={classes.error}>{success}</p>}
-						<button type="submit" className={classes.submit}>
-							Enviar
-						</button>
+						{success && (
+							<p className={`${classes.success} ${classes.message}`}>
+								{success}
+							</p>
+						)}
+						{error && (
+							<p className={`${classes.message} ${classes.error}`}>{error}</p>
+						)}
+						<div className={classes.buttons}>
+							<Turnstile
+								sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+								onSuccess={token => setToken(token)}
+								onExpire={() => setToken("")}
+							/>
+							<button type="submit" className={classes.submit}>
+								Enviar
+							</button>
+						</div>
 					</form>
 				</div>
 			</div>
