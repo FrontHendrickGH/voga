@@ -3,10 +3,14 @@
 	background-color: $azul;
 	max-width: 100vw;
 	width: 100%;
+	overflow: hidden;
 	.wrapperTitle {
 		max-width: 1430px;
 		width: 100%;
 		overflow: visible;
+		@media (max-width: 768px) {
+			max-width: 650px;
+		}
 	}
 	.title {
 		text-transform: uppercase;
