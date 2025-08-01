@@ -2,6 +2,12 @@
 .marquee {
 	background-color: $azul;
 	max-width: 100vw;
+	width: 100%;
+	.wrapperTitle {
+		max-width: 1430px;
+		width: 100%;
+		overflow: visible;
+	}
 	.title {
 		text-transform: uppercase;
 		padding-block: 112px;

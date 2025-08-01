@@ -13,6 +13,10 @@
 		margin-block: 30px;
 		padding-inline: 20px;
 	}
+	.wrapperTitle {
+		max-width: 1430px;
+		overflow: visible;
+	}
 	.title {
 		font-family: var(--font-playfair-display);
 		font-size: 10rem;

@@ -12,8 +12,9 @@ const Marquee = () => {
 				speed={60}
 				direction="left"
 				pauseOnHover={false}
+				className={classes.wrapperTitle}
 			>
-				<h1 className={classes.title}>celebra con nosotros &nbsp;</h1>
+				<h3 className={classes.title}>celebra con nosotros</h3>
 			</MarqueeC>
 			<Link href={"/contacto"} className={classes.link}>
 				Cotiza tu evento

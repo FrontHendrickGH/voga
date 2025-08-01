@@ -9,6 +9,7 @@ const MarqueeCorporative = () => {
 				gradient={false}
 				speed={60}
 				direction="left"
+				className={classes.wrapperTitle}
 				pauseOnHover={false}
 			>
 				<h1 className={classes.title}>Eventos corporativos &nbsp;</h1>
