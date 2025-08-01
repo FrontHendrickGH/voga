@@ -20,16 +20,49 @@
 			margin-bottom: 20px;
 		}
 	}
-	video {
-		max-width: 1064px;
-		max-height: 540px;
-		height: 100vh;
-		width: 100vw;
-		@media (max-width: 768px) {
-			max-height: 350px;
+	.container {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+
+		video {
+			max-width: 1064px;
+			max-height: 540px;
+			height: 100vh;
+			width: 100vw;
+			@media (max-width: 768px) {
+				max-height: 350px;
+			}
+			@media (max-width: 640px) {
+				max-height: 240px;
+			}
 		}
-		@media (max-width: 640px) {
-			max-height: 240px;
+
+		.overlay {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			pointer-events: none;
+		}
+
+		&:hover .overlay {
+			opacity: 1;
+		}
+
+		.icon {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		.visible {
+			opacity: 1;
 		}
 	}
 }
