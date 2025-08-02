@@ -11,7 +11,11 @@ const NuestraCocina = () => {
 	return (
 		<div className={styles.page}>
 			<Banner
-				image={{ src: "/cocina-banner.jpg", alt: "Banner de cocina" }}
+				image={{
+					src: "/cocina-banner.jpg",
+					srcMobile: "/cocina-banner-mobile.jpg",
+					alt: "Banner de cocina",
+				}}
 				title="Nuestra cocina"
 			/>
 			<SurpriseGuests />
