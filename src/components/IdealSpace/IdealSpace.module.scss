@@ -38,7 +38,7 @@
 				margin-bottom: 0;
 			}
 			@media (max-width: 768px) {
-				font-size: 2.4rem;
+				// font-size: 2.4rem;
 			}
 		}
 		figure {
@@ -212,7 +212,7 @@
 		gap: 100px;
 		margin-bottom: 80px;
 		@media (max-width: 768px) {
-			gap: 30px;
+			gap: 60px;
 			margin-bottom: 60px;
 		}
 	}
@@ -252,7 +252,7 @@
 		}
 		@media (max-width: 768px) {
 			flex-direction: column;
-			gap: 30px;
+			gap: 60px;
 		}
 		> div {
 			flex: 1;
