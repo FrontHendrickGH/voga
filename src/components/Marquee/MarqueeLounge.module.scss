@@ -1,6 +1,6 @@
 @use "../../app/variables" as *;
 .container {
-	margin-block: 150px 100px;
+	margin-block: 150px 144px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -9,9 +9,10 @@
 	width: 100%;
 	@media (max-width: 1200px) {
 		padding-inline: 80px;
+		margin-block: 90px;
 	}
 	@media (max-width: 768px) {
-		margin-block: 90px 30px;
+		margin-block: 60px;
 		padding-inline: 20px;
 	}
 	.wrapperTitle {
@@ -49,6 +50,9 @@
 		margin-top: 60px;
 		&::after {
 			background-color: rgba(80, 180, 255, 0.2);
+		}
+		@media (max-width: 768px) {
+			margin-top: 30px;
 		}
 	}
 }
