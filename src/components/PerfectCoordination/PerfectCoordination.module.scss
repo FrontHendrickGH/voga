@@ -38,7 +38,7 @@
 	aside {
 		&:last-child {
 			@media (max-width: 1024px) {
-				margin-top: 40px;
+				margin-top: -40px;
 				transform: translateY(0);
 				position: relative;
 				z-index: 3;
