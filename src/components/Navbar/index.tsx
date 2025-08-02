@@ -109,7 +109,10 @@ const Navbar = () => {
 							</MenuItems>
 						</Menu>
 						<li>
-							<Link onClick={setIsOpen.bind(null, false)} href="/contacto">
+							<Link
+								onClick={setIsOpen.bind(null, false)}
+								href="/contacto#tu-proximo-evento"
+							>
 								Contacto
 							</Link>
 						</li>

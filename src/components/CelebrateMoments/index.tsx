@@ -29,7 +29,7 @@ const CelebrateMoments = () => {
 						Sixteen y eventos sociales exclusivos, decoración, banquete y
 						coordinación.
 					</p>
-					<Link href={"/contacto"}>Agenda una visita</Link>
+					<Link href={"/contacto#tu-proximo-evento"}>Agenda una visita</Link>
 				</div>
 			</div>
 			<div className={classes.cards}>

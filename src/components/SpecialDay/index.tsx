@@ -41,7 +41,7 @@ const SpecialDay = () => {
 						Queremos celebrar contigo los momentos más importantes <br /> de tu
 						vida ayudándote a que todo salga a la perfección.
 					</p>
-					<Link href={"/contacto"}>Cotiza tu evento</Link>
+					<Link href={"/contacto#tu-proximo-evento"}>Cotiza tu evento</Link>
 				</div>
 			</div>
 			<figure className={classes.weddingImage}>

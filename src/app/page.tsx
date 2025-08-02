@@ -19,7 +19,7 @@ export default function Home() {
 				backgroundColor="#242C3F"
 				button={{
 					title: "Agenda ahora",
-					link: "/contacto",
+					link: "/contacto#tu-proximo-evento",
 					backgroundColor: "#449F82",
 					color: "#EDECEB",
 				}}
@@ -43,7 +43,7 @@ export default function Home() {
 				paddingTop={271}
 				title="Haz Realidad el Evento de Tus Sueños."
 				description="Contáctanos para agendar una visita y descubre cómo podemos hacer de tu evento una experiencia única."
-				button={{ title: "Contáctanos", href: "/contacto" }}
+				button={{ title: "Contáctanos", href: "/contacto#tu-proximo-evento" }}
 			/>
 		</div>
 	);

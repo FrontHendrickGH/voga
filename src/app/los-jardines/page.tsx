@@ -9,7 +9,10 @@ const LosJardines = () => {
 			<IntroduceLounges theme="Los-jardines" />
 			<Footer
 				paddingTop={216}
-				button={{ title: "Agenda una visita", href: "/contacto" }}
+				button={{
+					title: "Agenda una visita",
+					href: "/contacto#tu-proximo-evento",
+				}}
 				title="¿Listo para planear el evento de tus sueños?"
 				description="Contáctanos para agendar una visita y descubre cómo podemos hacer de tu evento una experiencia única."
 			/>

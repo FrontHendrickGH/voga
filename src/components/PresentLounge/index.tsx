@@ -43,7 +43,7 @@ const PresentLounge = () => {
 						<span>500 personas</span>
 					</p>
 					<div className={classes.links}>
-						<Link href={"/contacto"}>Cotiza ahora</Link>
+						<Link href={"/contacto#tu-proximo-evento"}>Cotiza ahora</Link>
 						<Link href={"/salon-voga"}>Ver salón</Link>
 					</div>
 				</div>
@@ -181,7 +181,7 @@ const PresentLounge = () => {
 						<span style={{ color: "#242C3F" }}>250 personas</span>
 					</p>
 					<div className={classes.links}>
-						<Link href={"/contacto"}>Cotiza ahora</Link>
+						<Link href={"/contacto#tu-proximo-evento"}>Cotiza ahora</Link>
 						<Link href={"/los-jardines"} style={{ backgroundColor: "#9CB731" }}>
 							Ver salón
 						</Link>

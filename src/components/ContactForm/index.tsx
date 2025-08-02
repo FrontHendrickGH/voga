@@ -85,7 +85,7 @@ const ContactForm = () => {
 	};
 
 	return (
-		<section className={classes.contact}>
+		<section className={classes.contact} id="tu-proximo-evento">
 			<div className={classes.formContainer}>
 				<div className={classes.containerTitle}>
 					<h3>Planea tu evento con nosotros</h3>

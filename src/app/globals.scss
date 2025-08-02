@@ -6,6 +6,8 @@ html {
 	font-size: 62.5%;
 	overflow: scroll !important;
 	padding-right: initial !important;
+	scroll-behavior: smooth !important;
+	--scroll-behavior: smooth !important;
 }
 
 html,

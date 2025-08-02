@@ -39,7 +39,7 @@ const NuestraCocina = () => {
 			/>
 			<Footer
 				paddingTop={270}
-				button={{ title: "Contáctanos", href: "/contacto" }}
+				button={{ title: "Contáctanos", href: "/contacto#tu-proximo-evento" }}
 				title="Haz Realidad el Evento de Tus Sueños"
 				description="Contáctanos para agendar una visita y descubre cómo podemos hacer de tu evento una experiencia única."
 			/>

@@ -167,7 +167,7 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 		backgroundColor: theme === "Voga" ? "#449F82" : "#9CB731",
 		button: {
 			title: "Agenda una visita",
-			link: "/contacto",
+			link: "/contacto#tu-proximo-evento",
 			color: "#242C3F",
 			backgroundColor: "#EDECEB",
 		},

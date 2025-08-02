@@ -24,7 +24,7 @@ const CorporativeEvents = () => {
 			<div className="gap-md" />
 			<Footer
 				paddingTop={120}
-				button={{ title: "Contáctanos", href: "/contacto" }}
+				button={{ title: "Contáctanos", href: "/contacto#tu-proximo-evento" }}
 				title="Agenda una llamada con nuestros expertos."
 				description="Contáctanos para agendar una visita y descubre cómo podemos hacer de tu evento una experiencia única."
 			/>
