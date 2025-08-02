@@ -33,7 +33,7 @@ const SpecialDay = () => {
 					<figure className={classes.image}>
 						<Image
 							fill
-							src={"/special-day-text.png"}
+							src={"/special-day-text.svg"}
 							alt="special day text 'Especial'"
 						/>
 					</figure>
