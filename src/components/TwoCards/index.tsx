@@ -65,7 +65,7 @@ const TwoCards = () => {
 						sin preocupaciones.
 					</p>
 					<Link href={"/coordinacion-y-decoracion"} className={classes.link}>
-						Descúbrela
+						Planeemos
 					</Link>
 				</div>
 			</div>

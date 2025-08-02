@@ -47,7 +47,9 @@
 				bottom: 0;
 				color: $cocina;
 				max-width: 100%;
-				transform: translateY(5px);
+				border-top-left-radius: 12px;
+				border-top-right-radius: 12px;
+				height: 11.8px;
 			}
 		}
 		&:last-child {
