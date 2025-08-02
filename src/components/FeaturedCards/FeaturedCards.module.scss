@@ -9,6 +9,11 @@
 		justify-content: center;
 		height: 1250px;
 		// max-height: 100vh;
+		background-image: url("/featured-cards-decoration.png");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		@media (max-width: 1440px) {
 			height: 1080px;
 		}
@@ -67,6 +72,8 @@
 					position: absolute;
 					top: -12px;
 					max-width: 100%;
+					border-top-right-radius: 12px;
+					border-top-left-radius: 12px;
 					@media (max-width: 768px) {
 						transform: translateY(2px);
 					}

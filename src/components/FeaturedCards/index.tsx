@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import classes from "./FeaturedCards.module.scss";
 import Link from "next/link";
@@ -7,11 +6,6 @@ const FeaturedCards = () => {
 	return (
 		<section className={classes.featured}>
 			<div className={classes.container}>
-				<Image
-					src={"/featured-cards-decoration.png"}
-					alt="Imagen de fondo sobre los servicios que ofrecemos "
-					fill
-				/>
 				<div className={classes.cards}>
 					<article className={classes.card}>
 						<svg
