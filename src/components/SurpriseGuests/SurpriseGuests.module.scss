@@ -9,6 +9,11 @@
 	max-width: 100vw;
 	width: 100%;
 	padding-inline: 80px;
+	background-image: url("/background-polaroid.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
 	@media (max-width: 768px) {
 		padding-inline: 20px;
 		padding-top: 60px;
