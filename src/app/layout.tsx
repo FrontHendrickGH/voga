@@ -14,8 +14,11 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-	title: "Voga app",
+	title: "Voga Eventos",
 	description: "Eventos memorables para tus invitados",
+	icons: {
+		icon: "/VOGA-favicon.png",
+	},
 };
 
 export default function RootLayout({
