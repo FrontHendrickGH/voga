@@ -172,7 +172,7 @@ const PresentLounge = () => {
 					/>
 					<h3>El jardín de eventos más versátil de Tijuana.</h3>
 					<ul>
-						<li>Jardín con un salon acogedor</li>
+						<li>Jardín con un salón acogedor</li>
 						<li>Ideal para celebraciones íntimas</li>
 						<li>Ambiente versátil</li>
 					</ul>
