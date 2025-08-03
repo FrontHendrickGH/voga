@@ -35,9 +35,9 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 	const infoLounges = {
 		Voga: {
 			images: [
-				"/voga-gallery-1.jpg",
-				"/voga-gallery-2.jpg",
-				"/voga-gallery-3.jpg",
+				["/voga-gallery-1.jpg", "/voga-gallery-mobile-1.jpg"],
+				["/voga-gallery-2.jpg", "/voga-gallery-mobile-2.jpg"],
+				["/voga-gallery-3.jpg", "/voga-gallery-mobile-3.jpg"],
 			],
 			section1: {
 				title: "Moderno y sofisticado.",
@@ -89,9 +89,9 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 		},
 		["Los-jardines"]: {
 			images: [
-				"/los-jardines-gallery-1.jpg",
-				"/los-jardines-gallery-2.jpg",
-				"/los-jardines-gallery-3.jpg",
+				["/los-jardines-gallery-1.jpg", "los-jardines-gallery-mobile-1.jpg"],
+				["/los-jardines-gallery-2.jpg", "los-jardines-gallery-mobile-2.jpg"],
+				["/los-jardines-gallery-3.jpg", "los-jardines-gallery-mobile-3.jpg"],
 			],
 			section1: {
 				title: "Íntimo y acogedor.",
@@ -189,12 +189,15 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 					{images.map((src, i) => (
 						<SwiperSlide key={i}>
 							<figure className={classes.image}>
-								<Image
-									src={src}
-									alt={`Slide ${i}`}
-									className="slide-image"
-									fill
-								/>
+								<picture>
+									<source srcSet={src[1]} media="(max-width: 768px)" />
+									<Image
+										src={src[0]}
+										alt={`Slide ${i}`}
+										className="slide-image"
+										fill
+									/>
+								</picture>
 							</figure>
 						</SwiperSlide>
 					))}
