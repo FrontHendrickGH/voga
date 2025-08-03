@@ -99,7 +99,7 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 				location: "Zona Río",
 				style: "Jardín - Clásico - Elegante - Versátil",
 				amenities: "Iluminación - Sonido - Seguridad - Valet Parking",
-				image: "/los-jardines.png",
+				image: "/los-jardines-polaroid.png",
 			},
 			section2: {
 				articles: [
@@ -340,7 +340,7 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 										loading="lazy"
 										src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2smx!4v1468824524559!6m8!1m7!1sYJPzxchvaX0AAAQvO6Uosg!2m2!1d32.51763296697016!2d-117.0104182250094!3f57!4f0!5f0.7820865974627469"
 										width="100%"
-										height="450"
+										height="378"
 										frameBorder="0"
 										allowFullScreen
 									></iframe>

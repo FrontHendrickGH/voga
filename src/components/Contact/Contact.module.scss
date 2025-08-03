@@ -10,6 +10,11 @@
 		padding-top: 60px;
 		padding-inline: 20px;
 	}
+	a {
+		&::after {
+			content: none;
+		}
+	}
 	&::after {
 		content: "";
 		position: absolute;
@@ -88,7 +93,7 @@
 							@media (max-width: 640px) {
 								border-right: none;
 								border-bottom: 0.75px solid $azul;
-								padding-bottom: 20px;
+								padding-bottom: 50px;
 							}
 						}
 						&:last-child {
@@ -97,11 +102,13 @@
 								padding-left: 30px;
 							}
 							@media (max-width: 768px) {
-								padding-left: 0;
+								padding-left: 20px;
 							}
 							@media (max-width: 640px) {
-								margin-top: 20px;
+								margin-top: 50px;
 								padding-bottom: 0;
+								padding-left: 0;
+								padding-top: 0;
 							}
 						}
 						div {
