@@ -435,19 +435,19 @@
 			max-height: 590px;
 		}
 		@media (max-width: 1024px) {
-			max-height: 450px;
+			max-height: 550px;
 		}
 		@media (max-width: 768px) {
-			max-height: 350px;
+			// max-height: 350px;
 			margin-inline: auto;
 			max-width: initial;
 		}
-		@media (max-width: 640px) {
-			max-height: 300px;
-		}
-		@media (max-width: 450px) {
-			height: 250px;
-		}
+		// @media (max-width: 640px) {
+		// 	max-height: 300px;
+		// }
+		// @media (max-width: 450px) {
+		// 	height: 250px;
+		// }
 		.image {
 			position: relative;
 			width: 100%;
@@ -459,18 +459,18 @@
 				max-height: 590px;
 			}
 			@media (max-width: 1024px) {
-				height: 450px;
+				height: 550px;
 				width: 100vw;
 			}
-			@media (max-width: 768px) {
-				height: 350px;
-			}
-			@media (max-width: 640px) {
-				height: 300px;
-			}
-			@media (max-width: 450px) {
-				height: 250px;
-			}
+			// @media (max-width: 768px) {
+			// 	height: 350px;
+			// }
+			// @media (max-width: 640px) {
+			// 	height: 300px;
+			// }
+			// @media (max-width: 450px) {
+			// 	height: 250px;
+			// }
 			img {
 				object-fit: cover;
 			}
