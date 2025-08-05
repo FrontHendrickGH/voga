@@ -43,8 +43,9 @@
 		}
 	}
 	.containerTitle {
-		display: flex;
+		display: inline-flex;
 		gap: 10px;
+		position: relative;
 		h3 {
 			font-size: 5rem;
 			font-family: var(--font-playfair-display);
@@ -58,14 +59,24 @@
 			@media (max-width: 768px) {
 				font-size: 3rem;
 				letter-spacing: 0.8px;
+				max-width: 480px;
 			}
 			@media (max-width: 640px) {
-				max-width: 70vw;
+				max-width: 200px;
 			}
 		}
 		svg {
+			position: absolute;
+			right: 0px;
+			transform: translate(20px, -10px);
 			@media (max-width: 768px) {
+				transform: translate(50px, -10px);
 				width: 35px;
+			}
+			@media (max-width: 640px) {
+				left: 0;
+				right: initial;
+				transform: translate(200px, -10px);
 			}
 		}
 	}
