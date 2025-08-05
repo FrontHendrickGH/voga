@@ -15,6 +15,7 @@ interface Props {
 		backgroundColor: string;
 	};
 	isFloating?: boolean;
+	className?: string;
 }
 
 const CTA: FC<Props> = ({
@@ -22,10 +23,13 @@ const CTA: FC<Props> = ({
 	button,
 	isFloating = true,
 	backgroundColor,
+	className,
 }) => {
 	return (
 		<aside
-			className={`${classes.cta} ${!isFloating ? classes.ctaFloating : ""}`}
+			className={`${classes.cta} ${!isFloating ? classes.ctaFloating : ""} ${
+				className || ""
+			}`}
 			style={{
 				backgroundColor,
 			}}

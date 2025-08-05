@@ -47,6 +47,7 @@ const PerfectCoordination = () => {
 			</figure>
 			<CTA
 				backgroundColor="#AC3964"
+				className={classes.cta}
 				button={{
 					title: "Llámanos",
 					color: "#242C3F",
@@ -56,8 +57,9 @@ const PerfectCoordination = () => {
 				title={{
 					title: (
 						<span>
-							Deja en manos de nuestros expertos la logística y disfruta tu
-							evento como el invitado más importante.
+							Deja en manos de nuestros expertos <br />
+							la logística y disfruta tu evento como <br /> el invitado más
+							importante.
 						</span>
 					),
 					color: "#EDECEB",

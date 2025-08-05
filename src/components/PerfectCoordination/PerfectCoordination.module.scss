@@ -12,6 +12,16 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	.cta {
+		h3 {
+			white-space: normal;
+		}
+		@media (max-width: 640px) {
+			br {
+				display: none;
+			}
+		}
+	}
 	@media (max-width: 768px) {
 		padding-top: 60px;
 	}
