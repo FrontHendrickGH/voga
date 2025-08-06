@@ -50,8 +50,8 @@
 		width: 100vw;
 		height: 1035px;
 		position: relative;
-		img {
-			object-fit: cover;
+		@media (max-width: 2056px) and (min-width: 1441px) {
+			height: calc(787px + (1035 - 787) * ((100vw - 1440px) / (2056 - 1440)));
 		}
 		@media (max-width: 1440px) {
 			height: 787px;
@@ -59,8 +59,8 @@
 		@media (max-width: 768px) {
 			height: 640px;
 		}
-		@media (max-width: 640px) {
-			// height: 450px;
+		img {
+			object-fit: cover;
 		}
 		&::after {
 			content: "";
