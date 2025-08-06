@@ -31,9 +31,9 @@ const Quote: FC<Props> = ({ theme }) => {
 };
 
 const IntroduceLounges: FC<Props> = ({ theme }) => {
-	console.log(theme);
 	const infoLounges = {
 		Voga: {
+			logo: "/voga-logo-gallery.svg",
 			images: [
 				["/voga-gallery-1.jpg", "/voga-gallery-mobile-1.jpg"],
 				["/voga-gallery-2.jpg", "/voga-gallery-mobile-2.jpg"],
@@ -88,6 +88,7 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 			},
 		},
 		["Los-jardines"]: {
+			logo: "/jardines-logo-gallery.svg",
 			images: [
 				["/los-jardines-gallery-1.jpg", "los-jardines-gallery-mobile-1.jpg"],
 				["/los-jardines-gallery-2.jpg", "los-jardines-gallery-mobile-2.jpg"],
@@ -172,7 +173,7 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 			backgroundColor: "#EDECEB",
 		},
 	};
-	const { section1, section2, section3, images } = infoLounges[theme];
+	const { section1, section2, section3, images, logo } = infoLounges[theme];
 	return (
 		<div className={`${classes.introduce} ${classes[`introduce--${theme}`]}`}>
 			<div className={classes.swiperContainer}>
@@ -189,6 +190,13 @@ const IntroduceLounges: FC<Props> = ({ theme }) => {
 					{images.map((src, i) => (
 						<SwiperSlide key={i}>
 							<figure className={classes.image}>
+								<Image
+									src={logo}
+									alt={`${theme} logo`}
+									className={classes.logo}
+									width={304}
+									height={164}
+								/>
 								<picture>
 									<source srcSet={src[1]} media="(max-width: 768px)" />
 									<Image

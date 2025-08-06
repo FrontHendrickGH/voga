@@ -497,6 +497,18 @@
 			// @media (max-width: 450px) {
 			// 	height: 250px;
 			// }
+			.logo {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				object-fit: scale-down;
+				z-index: 4;
+				@media (max-width: 768px) {
+					width: 250px !important;
+					height: 104px !important;
+				}
+			}
 			img {
 				object-fit: cover;
 			}
