@@ -10,7 +10,13 @@ import "swiper/css/navigation";
 import CTA from "../CTA";
 
 const IdealSpace = () => {
-	const images = ["/ideal-gallery-1.jpg", "/ideal-gallery-1.jpg"];
+	const images = [
+		"/ideal-gallery-1.jpg",
+		"/ideal-gallery-2.jpg",
+		"/ideal-gallery-3.jpg",
+		"/ideal-gallery-4.jpg",
+		"/ideal-gallery-5.jpg",
+	];
 	return (
 		<>
 			<section className={classes.ideal}>
