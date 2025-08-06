@@ -11,7 +11,7 @@ import Link from "next/link";
 const HeroSlider = () => {
 	const initialSlides = [
 		{
-			src: "/hero-slider/slide-1.png",
+			src: "/hero-slider/slide-1.jpg",
 			title: (
 				<span>
 					Eventos memorables
@@ -26,7 +26,7 @@ const HeroSlider = () => {
 			},
 		},
 		{
-			src: "/hero-slider/slide-2.png",
+			src: "/hero-slider/slide-2.jpg",
 			title: (
 				<span>
 					Detalles <br />
@@ -41,7 +41,7 @@ const HeroSlider = () => {
 			},
 		},
 		{
-			src: "/hero-slider/slide-3.png",
+			src: "/hero-slider/slide-3.jpg",
 			title: (
 				<span>
 					Una experiencia
@@ -56,7 +56,7 @@ const HeroSlider = () => {
 			},
 		},
 		{
-			src: "/hero-slider/slide-4.png",
+			src: "/hero-slider/slide-4.jpg",
 			title: (
 				<span>
 					Eventos <br />

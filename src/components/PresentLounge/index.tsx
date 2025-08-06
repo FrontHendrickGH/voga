@@ -10,16 +10,16 @@ import "swiper/css/navigation";
 
 const PresentLounge = () => {
 	const images = [
-		"/voga-lounge-1.png",
-		"/jardines-lounge-1.png",
-		"/voga-lounge-1.png",
-		"/jardines-lounge-1.png",
+		"/voga-lounge-1.jpg",
+		"/voga-lounge-2.jpg",
+		"/voga-lounge-3.jpg",
+		"/voga-lounge-4.jpg",
 	];
 	const images2 = [
-		"/jardines-lounge-1.png",
-		"/voga-lounge-1.png",
-		"/jardines-lounge-1.png",
-		"/voga-lounge-1.png",
+		"/jardines-lounge-1.jpg",
+		"/jardines-lounge-2.jpg",
+		"/jardines-lounge-3.jpg",
+		"/jardines-lounge-4.jpg",
 	];
 	return (
 		<section className={classes.present}>

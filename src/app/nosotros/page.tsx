@@ -10,7 +10,7 @@ const Nosotros = () => {
 	return (
 		<div className={styles.page}>
 			<Banner
-				image={{ src: "/banner-nosotros.png", alt: "sobre nosotros" }}
+				image={{ src: "/banner-nosotros.jpg", alt: "sobre nosotros" }}
 				title={"Quiénes Somos"}
 			/>
 			<IntroduceUs />

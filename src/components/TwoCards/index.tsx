@@ -8,7 +8,7 @@ const TwoCards = () => {
 		<section className={classes.container}>
 			<div className={classes.card}>
 				<figure>
-					<Image src={"/card-1.png"} alt="nuestro banquete y catering" fill />
+					<Image src={"/card-1.jpg"} alt="nuestro banquete y catering" fill />
 					<svg
 						width="100%"
 						height="20"
@@ -40,7 +40,7 @@ const TwoCards = () => {
 			</div>
 			<div className={classes.card}>
 				<figure>
-					<Image src={"/card-2.png"} alt="eventos en tijuana" fill />
+					<Image src={"/card-2.jpg"} alt="eventos en tijuana" fill />
 					<svg
 						width="100%"
 						height="20"
