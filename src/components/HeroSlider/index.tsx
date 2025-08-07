@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classes from "./HeroSlider.module.scss";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +12,7 @@ const HeroSlider = () => {
 	const initialSlides = [
 		{
 			src: "/hero-slider/slide-1.jpg",
+			srcMobile: "/hero-slider/slide-1-mobile.jpg",
 			title: (
 				<span>
 					Eventos memorables
@@ -27,6 +28,7 @@ const HeroSlider = () => {
 		},
 		{
 			src: "/hero-slider/slide-2.jpg",
+			srcMobile: "/hero-slider/slide-2-mobile.jpg",
 			title: (
 				<span>
 					Detalles <br />
@@ -42,6 +44,7 @@ const HeroSlider = () => {
 		},
 		{
 			src: "/hero-slider/slide-3.jpg",
+			srcMobile: "/hero-slider/slide-3-mobile.jpg",
 			title: (
 				<span>
 					Una experiencia
@@ -84,7 +87,7 @@ const HeroSlider = () => {
 				spaceBetween={0}
 				slidesPerView={1}
 			>
-				{slides.map(({ src, button, title }, i) => (
+				{initialSlides.map(({ src, button, title, srcMobile }, i) => (
 					<SwiperSlide key={i}>
 						<article className={classes.container}>
 							<div className={classes.containerInfo}>
@@ -102,12 +105,15 @@ const HeroSlider = () => {
 								)}
 							</div>
 							<figure className={classes.image}>
-								<Image
-									src={src}
-									alt={`Slide ${i}`}
-									className="slide-image"
-									fill
-								/>
+								<picture>
+									<source srcSet={srcMobile} media="(max-width: 820px)" />
+									<Image
+										src={src}
+										alt={`Slide ${i}`}
+										className="slide-image"
+										fill
+									/>
+								</picture>
 							</figure>
 						</article>
 					</SwiperSlide>
