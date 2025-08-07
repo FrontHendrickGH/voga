@@ -71,34 +71,6 @@ const HeroSlider = () => {
 			},
 		},
 	];
-	const [slides, setSlides] = useState(initialSlides);
-
-	useEffect(() => {
-		const updateFirstSlideSrc = () => {
-			setSlides(prev => {
-				const updated = [...prev];
-				updated[0] = {
-					...updated[0],
-					src:
-						window.innerWidth <= 1024
-							? "/hero-slider/slide-1-mobile.png"
-							: "/hero-slider/slide-1.png",
-				};
-				return updated;
-			});
-		};
-
-		// Initial check
-		updateFirstSlideSrc();
-
-		// Listen for resize
-		window.addEventListener("resize", updateFirstSlideSrc);
-
-		// Cleanup
-		return () => {
-			window.removeEventListener("resize", updateFirstSlideSrc);
-		};
-	}, []);
 
 	return (
 		<div className={classes.swiperContainer}>
